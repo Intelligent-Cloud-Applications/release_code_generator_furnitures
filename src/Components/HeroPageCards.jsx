@@ -26,7 +26,7 @@ const Features = () => (
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
           Why Choose
-          <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-white to-purple-600 bg-clip-text text-transparent">
             {" "}MarbleCo
           </span>
         </h2>

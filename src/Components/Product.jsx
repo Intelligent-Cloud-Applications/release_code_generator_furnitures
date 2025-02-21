@@ -80,9 +80,10 @@ const ProductPage = () => {
       {/* Header */}
       <div className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-semibold text-gray-900 text-center">
-            Luxury Marble Collection
-          </h1>
+        <h1 className="text-3xl font-semibold text-gray-900 text-center mt-13">
+  Luxury Marble Collection
+</h1>
+
         </div>
       </div>
 

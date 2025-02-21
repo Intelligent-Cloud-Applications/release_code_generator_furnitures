@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = [
-    { name: "Home", icon: "🏠", path: "/" },
-    { name: "Products", icon: "🛍️", path: "/products" },
-    { name: "About", icon: "ℹ️", path: "/about" },
-    { name: "Contact", icon: "📞", path: "/contact" }
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" }
   ];
 
   return (

@@ -46,7 +46,6 @@ const Hero = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Slides Container */}
       <div className="relative w-full h-full">
         {slides.map((slide, index) => (
           <div
@@ -64,27 +63,28 @@ const Hero = () => {
             />
 
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-700/30" />
 
-            {/* Content */}
-            <div className="relative h-full flex items-center px-8 md:px-16 lg:px-24">
+            {/* Centered Content */}
+            <div className="relative h-full flex justify-center items-center px-8 text-center">
               <div className="max-w-2xl">
-                <h1 className="text-white">
+                <h1 className="text-gray-200">
                   <span className="block text-4xl md:text-6xl font-bold mb-2 transition-all duration-700 delay-200">
                     {slide.title}
                   </span>
-                  <span className="block text-3xl md:text-5xl font-light text-gray-300 mb-6 transition-all duration-700 delay-300">
+                  <span className="block text-3xl md:text-5xl font-light text-gray-400 mb-6 transition-all duration-700 delay-300">
                     {slide.subtitle}
                   </span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-gray-300 mb-8 transition-all duration-700 delay-400">
+                <p className="text-lg md:text-xl text-gray-400 mb-8 transition-all duration-700 delay-400">
                   {slide.description}
                 </p>
 
-                <button className="group relative px-8 py-4 bg-white text-black rounded-full font-semibold overflow-hidden transition-all duration-300 hover:text-white">
+                {/* Aesthetic "Explore Now" Button */}
+                <button className="group relative px-8 py-4 rounded-full font-semibold text-gray-900 tracking-wide overflow-hidden bg-gradient-to-r from-gray-200 to-gray-300 shadow-md border border-gray-300 transition-all duration-500 ease-in-out hover:shadow-lg hover:border-gray-400">
                   <span className="relative z-10">Explore Now</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-400 to-gray-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full" />
                 </button>
               </div>
             </div>
@@ -99,53 +99,34 @@ const Hero = () => {
             key={index}
             onClick={() => setActiveIndex(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              activeIndex === index ? "bg-white w-8" : "bg-white/50 hover:bg-white/70"
+              activeIndex === index ? "bg-gray-300 w-8" : "bg-gray-400 hover:bg-gray-500"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
 
-      {/* Side Navigation Arrows */}
+      {/* Left Navigation Button */}
       <button
         onClick={() =>
           setActiveIndex(activeIndex === 0 ? slides.length - 1 : activeIndex - 1)
         }
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 transition-all"
+        className="absolute left-6 top-1/2 -translate-y-1/2 w-14 h-14 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-md border border-gray-300 shadow-md text-gray-900 hover:bg-white/30 transition-all duration-300 ease-in-out"
       >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 19l-7-7 7-7"
-          />
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
 
+      {/* Right Navigation Button */}
       <button
         onClick={() =>
           setActiveIndex(activeIndex === slides.length - 1 ? 0 : activeIndex + 1)
         }
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 transition-all"
+        className="absolute right-6 top-1/2 -translate-y-1/2 w-14 h-14 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-md border border-gray-300 shadow-md text-gray-900 hover:bg-white/30 transition-all duration-300 ease-in-out"
       >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 5l7 7-7 7"
-          />
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
     </div>

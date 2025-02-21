@@ -8,6 +8,7 @@ import HeroPageCards from "./Components/HeroPageCards";
 import Navbar from "./Components/Navbar";
 import Product from "./Components/Product";
 import Testimonials from "./Components/Testimonial";
+import WhatsApp from "./Components/WhatsApp";
 
 const HomePage = () => (
   <>
@@ -31,6 +32,9 @@ const App = () => {
         <Route path="/products" element={<Product />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
+      {/* WhatsApp button visible on all pages */}
+      <WhatsApp />
 
       {/* Footer is visible on all pages */}
       <Footer />

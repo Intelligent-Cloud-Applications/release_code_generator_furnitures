@@ -1,6 +1,5 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { ChevronUp } from 'lucide-react';
-//import PropTypes from "prop-types";
 
 const faqs = [
   {
@@ -13,7 +12,16 @@ const faqs = [
   },
   {
     question: "Where can I learn more about marble?",
-    answer: <a href="https://awsaiapp.com/" className="text-blue-600 hover:text-blue-800 underline transition-colors duration-200" target="_blank">awsaiapp.com</a>
+    answer: (
+      <a
+        href="https://awsaiapp.com/"
+        className="text-blue-600 hover:text-blue-800 underline transition-colors duration-200"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        awsaiapp.com
+      </a>
+    )
   }
 ];
 
@@ -21,7 +29,11 @@ const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
+    <div
+      className={`rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 ${
+        isOpen ? 'bg-white' : 'bg-gray-100'
+      }`}
+    >
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex justify-between items-center w-full px-6 py-4 text-left text-lg font-medium text-gray-900 hover:text-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-xl"
@@ -36,14 +48,12 @@ const FAQItem = ({ question, answer }) => {
 
       {isOpen && (
         <div
-          className="px-6 py-4 text-gray-600 bg-gray-50 rounded-b-xl border-t border-gray-100"
+          className="px-6 py-4 text-gray-600 bg-gray-50 rounded-b-xl border-t border-gray-200"
           style={{
-            animation: isOpen ? 'slideDown 0.2s ease-out' : 'slideUp 0.2s ease-out'
+            animation: isOpen ? 'slideDown 0.2s ease-out' : 'slideUp 0.2s ease-out',
           }}
         >
-          <div className="prose max-w-none">
-            {answer}
-          </div>
+          <div className="prose max-w-none">{answer}</div>
         </div>
       )}
     </div>
@@ -52,10 +62,10 @@ const FAQItem = ({ question, answer }) => {
 
 export default function FAQ() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-stone-100 py-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-700 mb-4">
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-gray-600">
@@ -65,11 +75,7 @@ export default function FAQ() {
 
         <div className="space-y-6">
           {faqs.map((faq, index) => (
-            <FAQItem
-              key={index}
-              question={faq.question}
-              answer={faq.answer}
-            />
+            <FAQItem key={index} question={faq.question} answer={faq.answer} />
           ))}
         </div>
 

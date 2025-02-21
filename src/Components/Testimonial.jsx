@@ -108,7 +108,7 @@ const Testimonials = () => {
       <div className="max-w-2xl mx-auto text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">
           Loved by
-          <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-stone-600 to-blue-600 bg-clip-text text-transparent">
             {" "}Our Clients
           </span>
         </h2>
@@ -134,15 +134,15 @@ const Testimonials = () => {
       <div className="mt-16 max-w-7xl mx-auto">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div className="p-4 bg-white rounded-xl shadow-sm">
-            <div className="text-3xl font-bold text-purple-600">4.9/5</div>
+            <div className="text-3xl font-bold text-stone-600">4.9/5</div>
             <div className="text-sm text-gray-500">Average Rating</div>
           </div>
           <div className="p-4 bg-white rounded-xl shadow-sm">
-            <div className="text-3xl font-bold text-blue-600">500+</div>
+            <div className="text-3xl font-bold text-stone-600">500+</div>
             <div className="text-sm text-gray-500">Happy Clients</div>
           </div>
           <div className="p-4 bg-white rounded-xl shadow-sm">
-            <div className="text-3xl font-bold text-purple-600">100%</div>
+            <div className="text-3xl font-bold text-stone-600">100%</div>
             <div className="text-sm text-gray-500">Satisfaction</div>
           </div>
         </div>
