@@ -132,18 +132,18 @@ const Testimonials = () => {
 
       {/* Review Stats */}
       <div className="mt-16 max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-          <div className="p-4 bg-white rounded-xl shadow-sm">
-            <div className="text-3xl font-bold text-stone-600">4.9/5</div>
-            <div className="text-sm text-gray-500">Average Rating</div>
+        <div className="flex justify-center gap-4">
+          <div className="p-4 bg-white rounded-xl shadow-sm w-40">
+            <div className="text-3xl font-bold text-stone-600 text-center">4.9/5</div>
+            <div className="text-sm text-gray-500 text-center">Average Rating</div>
           </div>
-          <div className="p-4 bg-white rounded-xl shadow-sm">
-            <div className="text-3xl font-bold text-stone-600">500+</div>
-            <div className="text-sm text-gray-500">Happy Clients</div>
+          <div className="p-4 bg-white rounded-xl shadow-sm w-40">
+            <div className="text-3xl font-bold text-stone-600 text-center">500+</div>
+            <div className="text-sm text-gray-500 text-center">Happy Clients</div>
           </div>
-          <div className="p-4 bg-white rounded-xl shadow-sm">
-            <div className="text-3xl font-bold text-stone-600">100%</div>
-            <div className="text-sm text-gray-500">Satisfaction</div>
+          <div className="p-4 bg-white rounded-xl shadow-sm w-40">
+            <div className="text-3xl font-bold text-stone-600 text-center">100%</div>
+            <div className="text-sm text-gray-500 text-center">Satisfaction</div>
           </div>
         </div>
       </div>

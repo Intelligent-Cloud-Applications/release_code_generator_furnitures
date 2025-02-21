@@ -62,7 +62,7 @@ const FAQItem = ({ question, answer }) => {
 
 export default function FAQ() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-stone-100 py-16">
+    <div className="bg-gradient-to-br from-zinc-50 to-stone-100 py-12">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-700 mb-4">
@@ -79,7 +79,7 @@ export default function FAQ() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-8 text-center">
           <p className="text-gray-600">
             Still have questions?{' '}
             <a
