@@ -81,11 +81,16 @@ const Hero = () => {
                   {slide.description}
                 </p>
 
-                {/* Aesthetic "Explore Now" Button */}
-                <button className="group relative px-8 py-4 rounded-full font-semibold text-gray-900 tracking-wide overflow-hidden bg-gradient-to-r from-gray-200 to-gray-300 shadow-md border border-gray-300 transition-all duration-500 ease-in-out hover:shadow-lg hover:border-gray-400">
+                {/* Updated "Explore Now" Button with Google Maps Link */}
+                <a
+                  href="https://maps.app.goo.gl/Ra79Scimee8tFGGy9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative px-8 py-4 rounded-full font-semibold text-gray-900 tracking-wide overflow-hidden bg-gradient-to-r from-gray-200 to-gray-300 shadow-md border border-gray-300 transition-all duration-500 ease-in-out hover:shadow-lg hover:border-gray-400"
+                >
                   <span className="relative z-10">Explore Now</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-gray-400 to-gray-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
