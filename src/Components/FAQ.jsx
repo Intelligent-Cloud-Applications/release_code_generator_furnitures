@@ -1,32 +1,28 @@
 import { useState } from 'react';
 import { ChevronUp } from 'lucide-react';
-
-const faqs = [
-  {
-    question: "What is marble?",
-    answer: "Marble is a natural stone used for construction and decoration."
-  },
-  {
-    question: "How do I order marble?",
-    answer: "You can place an order via our website or contact our sales team."
-  },
-  {
-    question: "Where can I learn more about marble?",
-    answer: (
-      <a
-        href="https://awsaiapp.com/"
-        className="text-blue-600 hover:text-blue-800 underline transition-colors duration-200"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        awsaiapp.com
-      </a>
-    )
-  }
-];
+import data from '../../utils/data.json';
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const renderAnswer = (answer) => {
+    if (typeof answer === 'string') {
+      return answer;
+    }
+    if (answer.type === 'link') {
+      return (
+        <a
+          href={answer.url}
+          className="text-blue-600 hover:text-blue-800 underline transition-colors duration-200"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {answer.text}
+        </a>
+      );
+    }
+    return answer;
+  };
 
   return (
     <div
@@ -53,7 +49,7 @@ const FAQItem = ({ question, answer }) => {
             animation: isOpen ? 'slideDown 0.2s ease-out' : 'slideUp 0.2s ease-out',
           }}
         >
-          <div className="prose max-w-none">{answer}</div>
+          <div className="prose max-w-none">{renderAnswer(answer)}</div>
         </div>
       )}
     </div>
@@ -61,32 +57,34 @@ const FAQItem = ({ question, answer }) => {
 };
 
 export default function FAQ() {
+  const { faq } = data;
+
   return (
     <div className="bg-gradient-to-br from-zinc-50 to-stone-100 py-12">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-700 mb-4">
-            Frequently Asked Questions
+            {faq.hero.title}
           </h2>
           <p className="text-lg text-gray-600">
-            Find answers to common questions about our marble products and services
+            {faq.hero.subtitle}
           </p>
         </div>
 
         <div className="space-y-6">
-          {faqs.map((faq, index) => (
-            <FAQItem key={index} question={faq.question} answer={faq.answer} />
+          {faq.items.map((item, index) => (
+            <FAQItem key={index} question={item.question} answer={item.answer} />
           ))}
         </div>
 
         <div className="mt-8 text-center">
           <p className="text-gray-600">
-            Still have questions?{' '}
+            {faq.contact.text}{' '}
             <a
               href="#contact"
               className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200"
             >
-              Contact our team
+              {faq.contact.linkText}
             </a>
           </p>
         </div>

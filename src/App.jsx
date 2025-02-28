@@ -4,19 +4,19 @@ import Contact from "./Components/Contact";
 import FAQ from "./Components/FAQ";
 import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
-import HeroPageCards from "./Components/HeroPageCards";
+import Services from "./Components/Services";
 import Navbar from "./Components/Navbar";
-import Productsection from "./Components/Products";
+import OurProducts from "./Components/Our-Products";
 import Testimonials from "./Components/Testimonial";
 import WhatsApp from "./Components/WhatsApp";
-import Product from "./Components/Product";
+import MarbleProduct from "./Components/MarbleProduct";
 import Tile from "./Components/TileProduct";
 
 import GranitePage from "./Components/GraniteProduct";
 const HomePage = () => (
   <>
     <Hero />
-    <HeroPageCards />
+    <Services />
     <Testimonials />
     <FAQ />
   </>
@@ -32,9 +32,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Productsection />} />
+        <Route path="/products" element={<OurProducts />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/Product" element={<Product />} />
+        <Route path="/marble" element={<MarbleProduct />} />
         <Route path="/Tile" element={<Tile />} />
         <Route path="/granite" element={<GranitePage />} />
       </Routes>

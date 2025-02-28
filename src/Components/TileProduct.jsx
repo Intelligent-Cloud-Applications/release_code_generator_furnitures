@@ -1,155 +1,53 @@
 import { useState } from 'react';
-import ItalianPorcelainImage from '../assets/beige.jpg';
-import SpanishCeramicImage from '../assets/beige.jpg';
-import MoroccanEncausticImage from '../assets/beige.jpg';
-import SubwayImage from '../assets/beige.jpg';
+import WoodLookImage from '../assets/beige.jpg';
+import MoroccanImage from '../assets/blackmarble.jpg';
+import LargeFormatImage from '../assets/download.jpg';
+import SubwayImage from '../assets/red.jpg';
 import TerrazzoDurableImage from '../assets/beige.jpg';
-import GlassImage from '../assets/beige.jpg';
+import GlassImage from '../assets/blackmarble.jpg';
+import data from '../../utils/data.json';
 
 // Import custom scrollbar styles
 import './scrollbar.css';
 
 const TileProductPage = () => {
-  // State to track which product's details are being shown
+  const { tile } = data;
   const [expandedProductId, setExpandedProductId] = useState(null);
 
-  const products = [
-    {
-      id: 1,
-      name: 'Italian Porcelain Tile',
-      price: 14.99,
-      rating: 4.9,
-      reviews: 142,
-      origin: 'Italy',
-      description: 'Durable porcelain tiles with natural stone appearance',
-      imageUrl: ItalianPorcelainImage,
-      type: 'Premium',
-      // Additional details
-      durability: 'Very High',
-      lifetime: '50+ years',
-      applications: 'Floors, walls, showers, outdoor patios, and high-traffic areas',
-      maintenance: 'Sweep or vacuum regularly, occasional mopping with mild cleaner',
-      availability: 'In stock',
-    },
-    {
-      id: 2,
-      name: 'Spanish Ceramic Tile',
-      price: 9.99,
-      rating: 4.7,
-      reviews: 105,
-      origin: 'Spain',
-      description: 'Vibrant hand-painted ceramic tiles with traditional patterns',
-      imageUrl: SpanishCeramicImage,
-      type: 'Classic',
-      // Additional details
-      durability: 'Medium',
-      lifetime: '20-30 years with proper maintenance',
-      applications: 'Backsplashes, accent walls, decorative features',
-      maintenance: 'Clean with gentle soap and water, avoid abrasive cleaners',
-      availability: 'In stock',
-    },
-    {
-      id: 3,
-      name: 'Moroccan Encaustic Cement Tile',
-      price: 18.99,
-      rating: 4.8,
-      reviews: 96,
-      origin: 'Morocco',
-      description: 'Handcrafted cement tiles with intricate geometric patterns',
-      imageUrl: MoroccanEncausticImage,
-      type: 'Artisan',
-      // Additional details
-      durability: 'High',
-      lifetime: '75+ years with proper maintenance',
-      applications: 'Feature floors, entryways, kitchen islands, accent walls',
-      maintenance: 'Seal annually, clean with pH neutral cleaner',
-      availability: 'Limited stock',
-    },
-    {
-      id: 4,
-      name: 'Classic Subway Tile',
-      price: 6.99,
-      rating: 4.6,
-      reviews: 188,
-      origin: 'United States',
-      description: 'Timeless white rectangular tiles with beveled edges',
-      imageUrl: SubwayImage,
-      type: 'Standard',
-      // Additional details
-      durability: 'High',
-      lifetime: '25+ years',
-      applications: 'Kitchen backsplashes, bathroom walls, shower surrounds',
-      maintenance: 'Regular cleaning with mild detergent, check grout annually',
-      availability: 'In stock',
-    },
-    {
-      id: 5,
-      name: 'Terrazzo Durable Tile',
-      price: 24.99,
-      rating: 4.9,
-      reviews: 76,
-      origin: 'Italy',
-      description: 'Contemporary terrazzo-look porcelain with colorful aggregate pattern',
-      imageUrl: TerrazzoDurableImage,
-      type: 'Premium',
-      // Additional details
-      durability: 'Very High',
-      lifetime: '50+ years',
-      applications: 'Modern floors, commercial spaces, statement walls',
-      maintenance: 'Standard cleaning, resistant to most chemicals',
-      availability: 'In stock',
-    },
-    {
-      id: 6,
-      name: 'Glass Mosaic Tile',
-      price: 21.99,
-      rating: 4.7,
-      reviews: 82,
-      origin: 'Japan',
-      description: 'Iridescent glass mosaic tiles with reflective properties',
-      imageUrl: GlassImage,
-      type: 'Luxury',
-      // Additional details
-      durability: 'Medium',
-      lifetime: '15-20 years',
-      applications: 'Backsplashes, shower accents, swimming pools, decorative features',
-      maintenance: 'Clean with glass cleaner, avoid abrasives',
-      availability: 'In stock',
-    }
-  ];
+  const imageMap = {
+    WoodLookImage,
+    MoroccanImage,
+    LargeFormatImage,
+    SubwayImage,
+    TerrazzoDurableImage,
+    GlassImage
+  };
 
-  // Function to toggle product details expansion
   const toggleDetails = (productId) => {
-    if (expandedProductId === productId) {
-      setExpandedProductId(null); // Collapse if already expanded
-    } else {
-      setExpandedProductId(productId); // Expand the clicked product
-    }
+    setExpandedProductId(expandedProductId === productId ? null : productId);
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Main Content Area */}
       <div className="max-w-7xl mx-auto px-4 pt-6 pb-12 sm:px-6 lg:px-8">
-        {/* Heading with elegant typography - Smaller on mobile */}
+        {/* Heading with elegant typography */}
         <div className="mb-12 relative">
           <h1 className="text-2xl md:text-4xl font-semibold text-gray-900 text-center mt-16 mb-2 tracking-wide">
-            Designer Tile Collection
+            {tile.hero.title}
           </h1>
           <p className="text-center text-gray-600 max-w-2xl mx-auto font-light">
-            Explore our curated selection of ceramic, porcelain, and specialty tiles from around the world.
+            {tile.hero.subtitle}
           </p>
         </div>
 
-        {/* Product Grid - Responsive with consistent dimensions */}
+        {/* Product Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {products.map((product) => (
+          {tile.products.map((product) => (
             <div
               key={product.id}
               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
-              style={{
-                perspective: '1000px'
-              }}
+              style={{ perspective: '1000px' }}
             >
               {/* Card container with flip animation */}
               <div
@@ -168,7 +66,7 @@ const TileProductPage = () => {
                   {/* Image Container - Fixed height for consistency */}
                   <div className="h-56 sm:h-64 overflow-hidden">
                     <img
-                      src={product.imageUrl}
+                      src={imageMap[product.image]}
                       alt={product.name}
                       className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                     />
@@ -248,7 +146,7 @@ const TileProductPage = () => {
                   <div
                     className="absolute inset-0 bg-cover bg-center opacity-20"
                     style={{
-                      backgroundImage: `url(${product.imageUrl})`
+                      backgroundImage: `url(${imageMap[product.image]})`
                     }}
                   ></div>
 
@@ -280,27 +178,27 @@ const TileProductPage = () => {
                         <div className="grid grid-cols-1 gap-4 text-sm">
                           <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
                             <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Durability</span>
-                            <span className="text-white font-light tracking-wide">{product.durability}</span>
+                            <span className="text-white font-light tracking-wide">{product.specifications.durability}</span>
                           </div>
 
                           <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
                             <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Expected Lifetime</span>
-                            <span className="text-white font-light tracking-wide">{product.lifetime}</span>
+                            <span className="text-white font-light tracking-wide">{product.specifications.lifetime}</span>
                           </div>
 
                           <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
                             <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Applications</span>
-                            <span className="text-white font-light tracking-wide">{product.applications}</span>
+                            <span className="text-white font-light tracking-wide">{product.specifications.applications}</span>
                           </div>
 
                           <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
                             <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Maintenance</span>
-                            <span className="text-white font-light tracking-wide">{product.maintenance}</span>
+                            <span className="text-white font-light tracking-wide">{product.specifications.maintenance}</span>
                           </div>
 
                           <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
                             <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Availability</span>
-                            <span className="text-white font-light tracking-wide">{product.availability}</span>
+                            <span className="text-white font-light tracking-wide">{product.specifications.availability}</span>
                           </div>
                         </div>
                       </div>

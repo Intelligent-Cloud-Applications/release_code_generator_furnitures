@@ -2,9 +2,16 @@ import { useState, useEffect } from "react";
 import img1 from "../assets/Replacetestimonials1.jpeg";
 import img2 from "../assets/testimonial2.jpg";
 import img3 from "../assets/testimonial 3.jpg";
+import data from "../../utils/data.json";
 
 const TestimonialCard = ({ testimonial, index }) => {
   const [isVisible, setIsVisible] = useState(false);
+  
+  const imageMap = {
+    img1,
+    img2,
+    img3
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -24,7 +31,7 @@ const TestimonialCard = ({ testimonial, index }) => {
           {/* Customer Image */}
           <div className="h-48 sm:h-64 overflow-hidden">
             <img
-              src={testimonial.image}
+              src={imageMap[testimonial.image]}
               alt={testimonial.name}
               className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
             />
@@ -57,7 +64,7 @@ const TestimonialCard = ({ testimonial, index }) => {
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-purple-500/20">
                 <img
-                  src={testimonial.profilePic}
+                  src={imageMap[testimonial.profilePic]}
                   alt={testimonial.name}
                   className="w-full h-full object-cover"
                 />
@@ -75,54 +82,29 @@ const TestimonialCard = ({ testimonial, index }) => {
 };
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Interior Designer",
-      image: img1,
-      profilePic: img1,
-      review: "Absolutely stunning marble quality! The veining patterns are exactly what I was looking for in my latest design project.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "Architect",
-      image: img2,
-      profilePic: img2,
-      review: "The attention to detail in their marble selection is unmatched. A true game-changer for luxury spaces.",
-      rating: 5
-    },
-    {
-      name: "Emma Thompson",
-      role: "Home Owner",
-      image: img3,
-      profilePic: img3,
-      review: "Working with MarbleCo was a dream. They helped me choose the perfect marble for my kitchen renovation.",
-      rating: 5
-    }
-  ];
+  const { testimonials } = data;
 
   return (
     <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
       {/* Header */}
       <div className="max-w-2xl mx-auto text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-          Loved by
+          {testimonials.hero.title}
           <span className="bg-gradient-to-r from-stone-600 to-blue-600 bg-clip-text text-transparent">
-            {" "}Our Clients
+            {" "}{testimonials.hero.highlightedText}
           </span>
         </h2>
         <p className="text-gray-600 max-w-xl mx-auto">
-          Discover why our clients choose us for their luxury marble needs.
+          {testimonials.hero.subtitle}
         </p>
       </div>
 
       {/* Testimonials Grid */}
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.reviews.map((testimonial, index) => (
             <TestimonialCard
-              key={index}
+              key={testimonial.id}
               testimonial={testimonial}
               index={index}
             />
@@ -134,16 +116,28 @@ const Testimonials = () => {
       <div className="mt-16 max-w-7xl mx-auto">
         <div className="flex justify-center gap-4">
           <div className="p-4 bg-white rounded-xl shadow-sm w-40">
-            <div className="text-3xl font-bold text-stone-600 text-center">4.9/5</div>
-            <div className="text-sm text-gray-500 text-center">Average Rating</div>
+            <div className="text-3xl font-bold text-stone-600 text-center">
+              {testimonials.stats.rating.value}
+            </div>
+            <div className="text-sm text-gray-500 text-center">
+              {testimonials.stats.rating.label}
+            </div>
           </div>
           <div className="p-4 bg-white rounded-xl shadow-sm w-40">
-            <div className="text-3xl font-bold text-stone-600 text-center">500+</div>
-            <div className="text-sm text-gray-500 text-center">Happy Clients</div>
+            <div className="text-3xl font-bold text-stone-600 text-center">
+              {testimonials.stats.clients.value}
+            </div>
+            <div className="text-sm text-gray-500 text-center">
+              {testimonials.stats.clients.label}
+            </div>
           </div>
           <div className="p-4 bg-white rounded-xl shadow-sm w-40">
-            <div className="text-3xl font-bold text-stone-600 text-center">100%</div>
-            <div className="text-sm text-gray-500 text-center">Satisfaction</div>
+            <div className="text-3xl font-bold text-stone-600 text-center">
+              {testimonials.stats.satisfaction.value}
+            </div>
+            <div className="text-sm text-gray-500 text-center">
+              {testimonials.stats.satisfaction.label}
+            </div>
           </div>
         </div>
       </div>

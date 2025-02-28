@@ -3,51 +3,37 @@ import { Link } from 'react-router-dom';
 import BeigeImage from '../assets/beige.jpg';
 import GrayImage from '../assets/blackmarble.jpg';
 import CeramicImage from '../assets/red.jpg';
+import data from '../../utils/data.json';
 
 const ProductSection = () => {
-  // Product category data
-  const categories = [
-    {
-      id: 1,
-      name: 'Marble',
-      description: 'Discover our exquisite selection of premium marble slabs and tiles, sourced from the finest quarries around the world.',
-      imageUrl: BeigeImage,
-      link: '/Product'
-    },
-    {
-      id: 2,
-      name: 'Granite',
-      description: 'Explore our extensive selection of durable, natural granite stone for countertops, flooring, and outdoor applications.',
-      imageUrl: GrayImage,
-      link: '/granite'
-    },
-    {
-      id: 3,
-      name: 'Tile',
-      description: 'Browse our curated selection of ceramic, porcelain, and natural stone tiles for floors, walls, and decorative accents.',
-      imageUrl: CeramicImage,
-      link: '/tile'
-    }
-  ];
+  const { products } = data;
+  
+  const imageMap = {
+    BeigeImage,
+    GrayImage,
+    CeramicImage
+  };
 
   return (
     <div className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-semibold text-gray-900">Our Product Collections</h2>
+          <h2 className="text-3xl font-semibold text-gray-900">
+            {products.hero.title}
+          </h2>
           <p className="mt-3 text-xl text-gray-600 max-w-2xl mx-auto">
-            Explore our premium natural stone and tile collections for your home or commercial projects.
+            {products.hero.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {categories.map((category) => (
+          {products.categories.map((category) => (
             <Link key={category.id} to={category.link} className="block">
               <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300 h-full">
                 {/* Image Container */}
                 <div className="relative">
                   <img
-                    src={category.imageUrl}
+                    src={imageMap[category.image]}
                     alt={category.name}
                     className="w-full h-64 object-cover"
                   />

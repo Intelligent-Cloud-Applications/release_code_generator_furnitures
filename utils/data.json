@@ -1,0 +1,609 @@
+{
+  "aboutUs": {
+    "hero": {
+      "title": "About Us",
+      "backgroundImage": "/api/placeholder/1920/400"
+    },
+    "story": {
+      "title": "Our Story",
+      "content": "Welcome to MarbleWorks, where craftsmanship meets excellence. With years of experience in the industry, we specialize in providing high-quality marble solutions for both residential and commercial projects."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "Our mission is to deliver premium marble products that enhance the beauty and value of every space. We take pride in sourcing the finest materials and combining them with expert craftsmanship to create timeless and durable designs."
+    },
+    "benefits": {
+      "title": "Why Choose Us?",
+      "items": [
+        {
+          "icon": "Gem",
+          "title": "High-quality, natural marble",
+          "description": "Sourced from the finest quarries worldwide"
+        },
+        {
+          "icon": "Settings",
+          "title": "Custom design and fabrication",
+          "description": "Tailored to your specific requirements"
+        },
+        {
+          "icon": "CheckCircle",
+          "title": "Expert craftsmanship",
+          "description": "Skilled artisans with years of experience"
+        },
+        {
+          "icon": "Heart",
+          "title": "Exceptional customer service",
+          "description": "Dedicated support throughout your project"
+        },
+        {
+          "icon": "Clock",
+          "title": "Timely project completion",
+          "description": "Committed to meeting deadlines"
+        }
+      ]
+    },
+    "cta": {
+      "text": "Get a Quote"
+    }
+  },
+  "faq": {
+    "hero": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions about our marble products and services"
+    },
+    "items": [
+      {
+        "question": "What is marble?",
+        "answer": "Marble is a natural stone used for construction and decoration."
+      },
+      {
+        "question": "How do I order marble?",
+        "answer": "You can place an order via our website or contact our sales team."
+      },
+      {
+        "question": "Where can I learn more about marble?",
+        "answer": {
+          "type": "link",
+          "text": "awsaiapp.com",
+          "url": "https://awsaiapp.com/"
+        }
+      }
+    ],
+    "contact": {
+      "text": "Still have questions?",
+      "linkText": "Contact our team"
+    }
+  },
+  "footer": {
+    "quickLinks": {
+      "title": "Quick Links",
+      "items": [
+        { "name": "Our Collections", "href": "#" },
+        { "name": "Custom Projects", "href": "#" },
+        { "name": "Installation Services", "href": "#" },
+        { "name": "Maintenance Guide", "href": "#" }
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "companyName": "Jaganju Marble & Granite",
+      "description": "Deals in : Granite ,Marble , Slabs ,Kadappa",
+      "location": "Location - Near Satsang Mandir , Junagard Road",
+      "phone": "9437283071"
+    },
+    "social": {
+      "title": "Connect With Us",
+      "description": "Follow us on social media for updates and inspiration",
+      "links": [
+        {
+          "name": "Facebook",
+          "href": "#",
+          "icon": "Facebook",
+          "hoverClass": "hover:bg-[#1877F2] hover:border-[#1877F2]"
+        },
+        {
+          "name": "Instagram",
+          "href": "#",
+          "icon": "Instagram",
+          "hoverClass": "hover:bg-gradient-to-r hover:from-[#405DE6] hover:via-[#E1306C] hover:to-[#FFDC80] hover:border-[#E1306C]"
+        }
+      ]
+    },
+    "copyright": {
+      "text": "Marble Company. All rights reserved."
+    }
+  },
+  "granite": {
+    "hero": {
+      "title": "Premium Granite Collection",
+      "subtitle": "Explore our selection of durable granite stones, known for their strength and natural beauty."
+    },
+    "products": [
+      {
+        "id": 1,
+        "name": "Absolute Black Granite",
+        "price": 179.99,
+        "rating": 4.9,
+        "reviews": 136,
+        "origin": "India",
+        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+        "image": "BlackImage",
+        "type": "Premium",
+        "specifications": {
+          "durability": "Very High",
+          "lifetime": "75+ years with proper maintenance",
+          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+          "maintenance": "Seal once a year, clean with granite-specific cleaner",
+          "availability": "In stock"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Baltic Brown Granite",
+        "price": 159.99,
+        "rating": 4.7,
+        "reviews": 98,
+        "origin": "Finland",
+        "description": "Reddish-brown base with black, white, and burgundy mineral deposits",
+        "image": "BrownImage",
+        "type": "Classic",
+        "specifications": {
+          "durability": "High",
+          "lifetime": "65+ years with proper maintenance",
+          "applications": "Kitchen countertops, bathroom vanities, fireplace surrounds",
+          "maintenance": "Seal annually, clean with pH neutral cleaner",
+          "availability": "In stock"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Blue Pearl Granite",
+        "price": 189.99,
+        "rating": 4.8,
+        "reviews": 112,
+        "origin": "Norway",
+        "description": "Iridescent blue-gray with sparkling silver and blue minerals",
+        "image": "GreyImage",
+        "type": "Premium",
+        "specifications": {
+          "durability": "High",
+          "lifetime": "70+ years with proper maintenance",
+          "applications": "Countertops, feature walls, and luxury commercial installations",
+          "maintenance": "Seal annually, daily cleaning with mild cleaners",
+          "availability": "Limited stock"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Kashmir Gold Granite",
+        "price": 219.99,
+        "rating": 4.9,
+        "reviews": 87,
+        "origin": "India",
+        "description": "Warm gold background with burgundy and black mineral patterns",
+        "image": "GoldImage",
+        "type": "Luxury",
+        "specifications": {
+          "durability": "High",
+          "lifetime": "65+ years with proper maintenance",
+          "applications": "Statement countertops, accent walls, and high-end installations",
+          "maintenance": "Seal every 6-12 months, clean with specialized stone cleaner",
+          "availability": "Limited stock"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Venetian Gold Granite",
+        "price": 199.99,
+        "rating": 4.7,
+        "reviews": 104,
+        "origin": "Brazil",
+        "description": "Beige background with gold, brown, and black mineral inclusions",
+        "image": "GoldImage",
+        "type": "Premium",
+        "specifications": {
+          "durability": "High",
+          "lifetime": "60+ years with proper maintenance",
+          "applications": "Kitchen countertops, bathroom vanities, and bar tops",
+          "maintenance": "Seal every 6 months, clean with gentle granite cleaner",
+          "availability": "In stock"
+        }
+      },
+      {
+        "id": 6,
+        "name": "Dakota Mahogany Granite",
+        "price": 169.99,
+        "rating": 4.6,
+        "reviews": 92,
+        "origin": "USA",
+        "description": "Rich mahogany red with consistent black mineral patterns",
+        "image": "RedImage",
+        "type": "Classic",
+        "specifications": {
+          "durability": "Very High",
+          "lifetime": "75+ years with proper maintenance",
+          "applications": "Exterior cladding, monuments, flooring, and countertops",
+          "maintenance": "Seal annually, minimal maintenance required",
+          "availability": "In stock"
+        }
+      }
+    ]
+  },
+  "hero": {
+    "slides": [
+      {
+        "image": "bg1",
+        "title": "Luxury Marble",
+        "subtitle": "Collection",
+        "description": "Timeless elegance for your space"
+      },
+      {
+        "image": "bg2",
+        "title": "Premium",
+        "subtitle": "Quality",
+        "description": "Crafted with excellence"
+      },
+      {
+        "image": "bg3",
+        "title": "Artistic",
+        "subtitle": "Design",
+        "description": "Where beauty meets functionality"
+      }
+    ],
+    "button": {
+      "text": "Explore Now",
+      "url": "https://maps.app.goo.gl/Ra79Scimee8tFGGy9"
+    },
+    "settings": {
+      "slideInterval": 5000
+    }
+  },
+  "marble": {
+    "hero": {
+      "title": "Luxury Marble Collection",
+      "subtitle": "Discover our premium selection of natural marble stones, sourced from the finest quarries worldwide."
+    },
+    "products": [
+      {
+        "id": 1,
+        "name": "Calacatta Gold",
+        "price": 249.99,
+        "rating": 4.9,
+        "reviews": 156,
+        "origin": "Italy",
+        "description": "Luxurious white marble with dramatic gold veining",
+        "image": "WhiteImage",
+        "type": "Premium",
+        "specifications": {
+          "durability": "Medium-High",
+          "lifetime": "50+ years with proper maintenance",
+          "applications": "Luxury countertops, feature walls, and high-end installations",
+          "maintenance": "Seal every 6 months, clean with marble-specific cleaner",
+          "availability": "Limited stock"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Emperador Dark",
+        "price": 189.99,
+        "rating": 4.7,
+        "reviews": 124,
+        "origin": "Spain",
+        "description": "Rich brown marble with fine veining",
+        "image": "BrownImage",
+        "type": "Classic",
+        "specifications": {
+          "durability": "High",
+          "lifetime": "60+ years with proper maintenance",
+          "applications": "Flooring, walls, and countertops",
+          "maintenance": "Annual sealing, regular cleaning with pH-neutral cleaner",
+          "availability": "In stock"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Statuario",
+        "price": 279.99,
+        "rating": 4.8,
+        "reviews": 92,
+        "origin": "Italy",
+        "description": "Premium white marble with elegant gray veining",
+        "image": "WhiteImage",
+        "type": "Luxury",
+        "specifications": {
+          "durability": "Medium",
+          "lifetime": "45+ years with proper maintenance",
+          "applications": "High-end residential and commercial projects",
+          "maintenance": "Seal every 6 months, gentle daily cleaning",
+          "availability": "Limited stock"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Nero Marquina",
+        "price": 199.99,
+        "rating": 4.6,
+        "reviews": 108,
+        "origin": "Spain",
+        "description": "Deep black marble with striking white veins",
+        "image": "BlackImage",
+        "type": "Premium",
+        "specifications": {
+          "durability": "High",
+          "lifetime": "55+ years with proper maintenance",
+          "applications": "Flooring, countertops, and decorative features",
+          "maintenance": "Annual sealing, regular cleaning with stone cleaner",
+          "availability": "In stock"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Carrara White",
+        "price": 159.99,
+        "rating": 4.8,
+        "reviews": 178,
+        "origin": "Italy",
+        "description": "Timeless white marble with soft gray veining",
+        "image": "WhiteImage",
+        "type": "Classic",
+        "specifications": {
+          "durability": "Medium",
+          "lifetime": "40+ years with proper maintenance",
+          "applications": "Bathrooms, vanities, and lighter-use kitchens",
+          "maintenance": "Seal every 6 months, daily cleaning with gentle cleaners",
+          "availability": "In stock"
+        }
+      },
+      {
+        "id": 6,
+        "name": "Portoro Gold",
+        "price": 299.99,
+        "rating": 4.9,
+        "reviews": 67,
+        "origin": "Italy",
+        "description": "Dramatic black marble with golden veining",
+        "image": "BlackImage",
+        "type": "Luxury",
+        "specifications": {
+          "durability": "Medium-High",
+          "lifetime": "50+ years with proper maintenance",
+          "applications": "Luxury accent features, statement walls, and high-end installations",
+          "maintenance": "Seal every 6 months, clean with specialized marble cleaner",
+          "availability": "Limited stock - special order"
+        }
+      }
+    ]
+  },
+  "services": {
+    "hero": {
+      "title": "Why Choose",
+      "highlightedText": "MarbleCo",
+      "subtitle": "Experience unparalleled quality and service with our premium marble solutions"
+    },
+    "features": [
+      {
+        "id": 1,
+        "title": "Premium Selection",
+        "description": "Curated collection of the finest marble from around the world, ensuring exceptional quality and unique patterns.",
+        "icon": "💎"
+      },
+      {
+        "id": 2,
+        "title": "Expert Craftsmanship",
+        "description": "Skilled artisans with decades of experience in marble cutting, polishing, and installation.",
+        "icon": "⚒️"
+      },
+      {
+        "id": 3,
+        "title": "Lifetime Warranty",
+        "description": "Our confidence in quality is backed by a comprehensive lifetime warranty on all installations.",
+        "icon": "🛡️"
+      }
+    ]
+  },
+  "products": {
+    "hero": {
+      "title": "Our Product Collections",
+      "subtitle": "Explore our premium natural stone and tile collections for your home or commercial projects."
+    },
+    "categories": [
+      {
+        "id": 1,
+        "name": "Marble",
+        "description": "Discover our exquisite selection of premium marble slabs and tiles, sourced from the finest quarries around the world.",
+        "image": "BeigeImage",
+        "link": "/Product"
+      },
+      {
+        "id": 2,
+        "name": "Granite",
+        "description": "Explore our extensive selection of durable, natural granite stone for countertops, flooring, and outdoor applications.",
+        "image": "GrayImage",
+        "link": "/granite"
+      },
+      {
+        "id": 3,
+        "name": "Tile",
+        "description": "Browse our curated selection of ceramic, porcelain, and natural stone tiles for floors, walls, and decorative accents.",
+        "image": "CeramicImage",
+        "link": "/tile"
+      }
+    ]
+  },
+  "testimonials": {
+    "hero": {
+      "title": "Loved by",
+      "highlightedText": "Our Clients",
+      "subtitle": "Discover why our clients choose us for their luxury marble needs."
+    },
+    "stats": {
+      "rating": {
+        "value": "4.9/5",
+        "label": "Average Rating"
+      },
+      "clients": {
+        "value": "500+",
+        "label": "Happy Clients"
+      },
+      "satisfaction": {
+        "value": "100%",
+        "label": "Satisfaction"
+      }
+    },
+    "reviews": [
+      {
+        "id": 1,
+        "name": "Sarah Johnson",
+        "role": "Interior Designer",
+        "image": "img1",
+        "profilePic": "img1",
+        "review": "Absolutely stunning marble quality! The veining patterns are exactly what I was looking for in my latest design project.",
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "name": "Michael Chen",
+        "role": "Architect",
+        "image": "img2",
+        "profilePic": "img2",
+        "review": "The attention to detail in their marble selection is unmatched. A true game-changer for luxury spaces.",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Emma Thompson",
+        "role": "Home Owner",
+        "image": "img3",
+        "profilePic": "img3",
+        "review": "Working with MarbleCo was a dream. They helped me choose the perfect marble for my kitchen renovation.",
+        "rating": 5
+      }
+    ]
+  },
+  "tile": {
+    "hero": {
+      "title": "Designer Tile Collection",
+      "subtitle": "Explore our curated selection of ceramic, porcelain, and specialty tiles from around the world."
+    },
+    "products": [
+      {
+        "id": 1,
+        "name": "Porcelain Wood-Look Tile",
+        "price": 12.99,
+        "rating": 4.8,
+        "reviews": 145,
+        "origin": "Spain",
+        "description": "Realistic wood-grain porcelain tiles with exceptional durability",
+        "image": "WoodLookImage",
+        "type": "Premium",
+        "specifications": {
+          "durability": "Very High",
+          "lifetime": "30+ years",
+          "applications": "Indoor floors, outdoor patios, commercial spaces",
+          "maintenance": "Simple cleaning with mild detergent",
+          "availability": "In stock"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Moroccan Pattern Ceramic",
+        "price": 15.99,
+        "rating": 4.7,
+        "reviews": 98,
+        "origin": "Morocco",
+        "description": "Intricate geometric patterns in vibrant colors",
+        "image": "MoroccanImage",
+        "type": "Decorative",
+        "specifications": {
+          "durability": "Medium",
+          "lifetime": "20+ years",
+          "applications": "Feature walls, backsplashes, decorative borders",
+          "maintenance": "Regular cleaning with non-abrasive cleaner",
+          "availability": "Made to order"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Large Format Porcelain",
+        "price": 18.99,
+        "rating": 4.9,
+        "reviews": 112,
+        "origin": "Italy",
+        "description": "Modern large-format tiles with marble-like appearance",
+        "image": "LargeFormatImage",
+        "type": "Luxury",
+        "specifications": {
+          "durability": "High",
+          "lifetime": "35+ years",
+          "applications": "Large spaces, feature walls, modern installations",
+          "maintenance": "Periodic sealing, regular cleaning",
+          "availability": "In stock"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Classic Subway Tile",
+        "price": 6.99,
+        "rating": 4.6,
+        "reviews": 188,
+        "origin": "United States",
+        "description": "Timeless white rectangular tiles with beveled edges",
+        "image": "SubwayImage",
+        "type": "Standard",
+        "specifications": {
+          "durability": "High",
+          "lifetime": "25+ years",
+          "applications": "Kitchen backsplashes, bathroom walls, shower surrounds",
+          "maintenance": "Regular cleaning with mild detergent, check grout annually",
+          "availability": "In stock"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Terrazzo Durable Tile",
+        "price": 24.99,
+        "rating": 4.9,
+        "reviews": 76,
+        "origin": "Italy",
+        "description": "Contemporary terrazzo-look porcelain with colorful aggregate pattern",
+        "image": "TerrazzoDurableImage",
+        "type": "Premium",
+        "specifications": {
+          "durability": "Very High",
+          "lifetime": "50+ years",
+          "applications": "Modern floors, commercial spaces, statement walls",
+          "maintenance": "Standard cleaning, resistant to most chemicals",
+          "availability": "In stock"
+        }
+      },
+      {
+        "id": 6,
+        "name": "Glass Mosaic Tile",
+        "price": 21.99,
+        "rating": 4.7,
+        "reviews": 82,
+        "origin": "Japan",
+        "description": "Iridescent glass mosaic tiles with reflective properties",
+        "image": "GlassImage",
+        "type": "Luxury",
+        "specifications": {
+          "durability": "Medium",
+          "lifetime": "15-20 years",
+          "applications": "Backsplashes, shower accents, swimming pools, decorative features",
+          "maintenance": "Clean with glass cleaner, avoid abrasives",
+          "availability": "In stock"
+        }
+      }
+    ]
+  },
+  "whatsapp": {
+    "button": {
+      "text": "Chat with us",
+      "phoneNumber": "9437283071",
+      "message": "Hello! I'm interested in your marble and granite products."
+    },
+    "tooltip": {
+      "text": "Message us on WhatsApp"
+    }
+  }
+}

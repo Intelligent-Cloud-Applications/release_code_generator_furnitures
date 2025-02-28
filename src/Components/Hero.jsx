@@ -2,43 +2,30 @@ import { useState, useEffect } from "react";
 import bg1 from "../assets/background1.jpg";
 import bg2 from "../assets/red.jpg";
 import bg3 from "../assets/download.jpg";
+import data from "../../utils/data.json";
 
 const Hero = () => {
+  const { hero } = data;
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  const slides = [
-    {
-      image: bg1,
-      title: "Luxury Marble",
-      subtitle: "Collection",
-      description: "Timeless elegance for your space",
-    },
-    {
-      image: bg2,
-      title: "Premium",
-      subtitle: "Quality",
-      description: "Crafted with excellence",
-    },
-    {
-      image: bg3,
-      title: "Artistic",
-      subtitle: "Design",
-      description: "Where beauty meets functionality",
-    },
-  ];
+  const imageMap = {
+    bg1,
+    bg2,
+    bg3
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isHovered) {
         setActiveIndex((current) =>
-          current === slides.length - 1 ? 0 : current + 1
+          current === hero.slides.length - 1 ? 0 : current + 1
         );
       }
-    }, 5000);
+    }, hero.settings.slideInterval);
 
     return () => clearInterval(interval);
-  }, [isHovered, slides.length]);
+  }, [isHovered, hero.slides.length, hero.settings.slideInterval]);
 
   return (
     <div
@@ -47,7 +34,7 @@ const Hero = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative w-full h-full">
-        {slides.map((slide, index) => (
+        {hero.slides.map((slide, index) => (
           <div
             key={index}
             className={`absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out ${
@@ -59,7 +46,7 @@ const Hero = () => {
             {/* Background Image */}
             <div
               className="absolute inset-0 bg-cover bg-center transform scale-105 transition-transform duration-1000"
-              style={{ backgroundImage: `url(${slide.image})` }}
+              style={{ backgroundImage: `url(${imageMap[slide.image]})` }}
             />
 
             {/* Gradient Overlay */}
@@ -81,14 +68,14 @@ const Hero = () => {
                   {slide.description}
                 </p>
 
-                {/* Updated "Explore Now" Button with Google Maps Link */}
+                {/* Explore Now Button */}
                 <a
-                  href="https://maps.app.goo.gl/Ra79Scimee8tFGGy9"
+                  href={hero.button.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative px-8 py-4 rounded-full font-semibold text-gray-900 tracking-wide overflow-hidden bg-gradient-to-r from-gray-200 to-gray-300 shadow-md border border-gray-300 transition-all duration-500 ease-in-out hover:shadow-lg hover:border-gray-400"
                 >
-                  <span className="relative z-10">Explore Now</span>
+                  <span className="relative z-10">{hero.button.text}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-gray-400 to-gray-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full" />
                 </a>
               </div>
@@ -99,7 +86,7 @@ const Hero = () => {
 
       {/* Navigation Dots */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-4">
-        {slides.map((_, index) => (
+        {hero.slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setActiveIndex(index)}
@@ -114,7 +101,7 @@ const Hero = () => {
       {/* Left Navigation Button */}
       <button
         onClick={() =>
-          setActiveIndex(activeIndex === 0 ? slides.length - 1 : activeIndex - 1)
+          setActiveIndex(activeIndex === 0 ? hero.slides.length - 1 : activeIndex - 1)
         }
         className="absolute left-6 top-1/2 -translate-y-1/2 w-14 h-14 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-md border border-gray-300 shadow-md text-gray-900 hover:bg-white/30 transition-all duration-300 ease-in-out"
       >
@@ -126,7 +113,7 @@ const Hero = () => {
       {/* Right Navigation Button */}
       <button
         onClick={() =>
-          setActiveIndex(activeIndex === slides.length - 1 ? 0 : activeIndex + 1)
+          setActiveIndex(activeIndex === hero.slides.length - 1 ? 0 : activeIndex + 1)
         }
         className="absolute right-6 top-1/2 -translate-y-1/2 w-14 h-14 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-md border border-gray-300 shadow-md text-gray-900 hover:bg-white/30 transition-all duration-300 ease-in-out"
       >
