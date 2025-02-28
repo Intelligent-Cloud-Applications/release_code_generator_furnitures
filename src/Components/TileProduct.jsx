@@ -1,17 +1,18 @@
 import { useState } from 'react';
+import { useData } from '../context/context';
+import { motion, AnimatePresence } from 'framer-motion';
 import WoodLookImage from '../assets/beige.jpg';
 import MoroccanImage from '../assets/blackmarble.jpg';
 import LargeFormatImage from '../assets/download.jpg';
 import SubwayImage from '../assets/red.jpg';
 import TerrazzoDurableImage from '../assets/beige.jpg';
 import GlassImage from '../assets/blackmarble.jpg';
-import data from '../../utils/data.json';
 
 // Import custom scrollbar styles
 import './scrollbar.css';
 
 const TileProductPage = () => {
-  const { tile } = data;
+  const { data, loading, error } = useData();
   const [expandedProductId, setExpandedProductId] = useState(null);
 
   const imageMap = {
@@ -23,59 +24,115 @@ const TileProductPage = () => {
     GlassImage
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <motion.div 
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          className="w-12 h-12 border-4 border-gray-900 border-t-transparent rounded-full"
+        />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center p-8 bg-white rounded-xl shadow-lg">
+          <h2 className="text-2xl font-bold text-red-600 mb-4">Oops! Something went wrong</h2>
+          <p className="text-gray-600 mb-4">We're having trouble loading the products.</p>
+          <button 
+            onClick={() => window.location.reload()}
+            className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800"
+          >
+            Try Again
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  const { tile } = data;
+
   const toggleDetails = (productId) => {
     setExpandedProductId(expandedProductId === productId ? null : productId);
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="min-h-screen bg-gray-50"
+    >
       {/* Main Content Area */}
       <div className="max-w-7xl mx-auto px-4 pt-6 pb-12 sm:px-6 lg:px-8">
         {/* Heading with elegant typography */}
-        <div className="mb-12 relative">
+        <motion.div 
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 relative"
+        >
           <h1 className="text-2xl md:text-4xl font-semibold text-gray-900 text-center mt-16 mb-2 tracking-wide">
             {tile.hero.title}
           </h1>
           <p className="text-center text-gray-600 max-w-2xl mx-auto font-light">
             {tile.hero.subtitle}
           </p>
-        </div>
+        </motion.div>
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {tile.products.map((product) => (
-            <div
+          {tile.products.map((product, index) => (
+            <motion.div
               key={product.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
               style={{ perspective: '1000px' }}
             >
               {/* Card container with flip animation */}
-              <div
-                className={`relative transition-all duration-700 w-full h-full flex-grow flex flex-col`}
+              <motion.div
+                animate={{
+                  rotateY: expandedProductId === product.id ? 180 : 0,
+                }}
+                transition={{
+                  duration: 0.7,
+                  ease: [0.4, 0, 0.2, 1]
+                }}
+                className="relative w-full h-full flex-grow flex flex-col"
                 style={{
                   transformStyle: 'preserve-3d',
-                  transform: expandedProductId === product.id ? 'rotateY(180deg)' : 'rotateY(0deg)',
                   minHeight: '500px',
                 }}
               >
-                {/* Front side - Product image and basic info */}
+                {/* Front side */}
                 <div
                   className="absolute w-full h-full backface-hidden flex flex-col rounded-xl overflow-hidden"
                   style={{ backfaceVisibility: 'hidden' }}
                 >
-                  {/* Image Container - Fixed height for consistency */}
-                  <div className="h-56 sm:h-64 overflow-hidden">
-                    <img
+                  {/* Image Container */}
+                  <div className="h-56 sm:h-64 overflow-hidden relative">
+                    <motion.img
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.5 }}
                       src={imageMap[product.image]}
                       alt={product.name}
-                      className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover"
                     />
-                    <span className="absolute top-4 left-4 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <motion.span 
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.2 }}
+                      className="absolute top-4 left-4 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-medium"
+                    >
                       {product.type}
-                    </span>
+                    </motion.span>
                   </div>
 
-                  {/* Content with fixed layout for consistency */}
+                  {/* Content */}
                   <div className="p-4 sm:p-6 flex flex-col flex-grow">
                     {/* Title and Origin */}
                     <div className="flex justify-between items-start mb-2">
@@ -122,16 +179,18 @@ const TileProductPage = () => {
                     </div>
 
                     {/* View Details Button - Fixed position at bottom */}
-                    <button
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
                       className="w-full bg-gray-900 text-white py-2 sm:py-3 rounded-lg hover:bg-gray-800 transition-colors duration-300 mt-auto text-sm sm:text-base font-medium"
                       onClick={() => toggleDetails(product.id)}
                     >
                       View Details
-                    </button>
+                    </motion.button>
                   </div>
                 </div>
 
-                {/* Back side - Product details with black background covering entire card */}
+                {/* Back side */}
                 <div
                   className="absolute w-full h-full backface-hidden overflow-hidden rounded-xl"
                   style={{
@@ -206,21 +265,47 @@ const TileProductPage = () => {
 
                     {/* Back to Product Button - Updated with aesthetic color */}
                     <div className="mt-5">
-                      <button
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
                         className="w-full bg-gradient-to-r from-gray-700 to-gray-900 text-white font-light tracking-wider py-2 sm:py-3 rounded-lg hover:bg-white hover:text-black transition-all duration-300 text-sm sm:text-base hover:from-white hover:to-white"
                         onClick={() => toggleDetails(product.id)}
                       >
                         Back to Product
-                      </button>
+                      </motion.button>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+
+      {/* Custom scrollbar styles */}
+      <style>
+        {`
+          .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+          }
+
+          .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+          }
+
+          .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+          }
+
+          .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+          }
+        `}
+      </style>
+    </motion.div>
   );
 };
 

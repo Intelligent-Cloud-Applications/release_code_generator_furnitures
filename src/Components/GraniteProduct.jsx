@@ -1,13 +1,14 @@
 import { useState } from 'react';
+import { useData } from '../context/context';
+import { motion, AnimatePresence } from 'framer-motion';
 import BlackImage from '../assets/blackmarble.jpg';
 import RedImage from '../assets/blackmarble.jpg';
 import GreyImage from '../assets/download.jpg';
 import BrownImage from '../assets/red.jpg';
 import GoldImage from '../assets/beige.jpg';
-import data from '../../utils/data.json';
 
 const GranitePage = () => {
-  const { granite } = data;
+  const { data, loading, error } = useData();
   const [expandedProductId, setExpandedProductId] = useState(null);
 
   const imageMap = {
@@ -18,56 +19,112 @@ const GranitePage = () => {
     GoldImage
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <motion.div 
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          className="w-12 h-12 border-4 border-gray-900 border-t-transparent rounded-full"
+        />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center p-8 bg-white rounded-xl shadow-lg">
+          <h2 className="text-2xl font-bold text-red-600 mb-4">Oops! Something went wrong</h2>
+          <p className="text-gray-600 mb-4">We're having trouble loading the products.</p>
+          <button 
+            onClick={() => window.location.reload()}
+            className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800"
+          >
+            Try Again
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  const { granite } = data;
+
   const toggleDetails = (productId) => {
     setExpandedProductId(expandedProductId === productId ? null : productId);
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="min-h-screen bg-gray-50"
+    >
       {/* Main Content Area */}
       <div className="max-w-7xl mx-auto px-4 pt-6 pb-12 sm:px-6 lg:px-8">
-        {/* Heading with elegant typography - Smaller on mobile */}
-        <div className="mb-12 relative">
+        {/* Heading with elegant typography */}
+        <motion.div 
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 relative"
+        >
           <h1 className="text-2xl md:text-4xl font-semibold text-gray-900 text-center mt-16 mb-2 tracking-wide">
             {granite.hero.title}
           </h1>
           <p className="text-center text-gray-600 max-w-2xl mx-auto font-light">
             {granite.hero.subtitle}
           </p>
-        </div>
+        </motion.div>
 
-        {/* Product Grid - Responsive with consistent dimensions */}
+        {/* Product Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {granite.products.map((product) => (
-            <div
+          {granite.products.map((product, index) => (
+            <motion.div
               key={product.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
               style={{ perspective: '1000px' }}
             >
               {/* Card container with flip animation */}
-              <div
-                className={`relative transition-all duration-700 w-full h-full flex-grow flex flex-col`}
+              <motion.div
+                animate={{
+                  rotateY: expandedProductId === product.id ? 180 : 0,
+                }}
+                transition={{
+                  duration: 0.7,
+                  ease: [0.4, 0, 0.2, 1]
+                }}
+                className="relative w-full h-full flex-grow flex flex-col"
                 style={{
                   transformStyle: 'preserve-3d',
-                  transform: expandedProductId === product.id ? 'rotateY(180deg)' : 'rotateY(0deg)',
                   minHeight: '500px',
                 }}
               >
-                {/* Front side - Product image and basic info */}
+                {/* Front side */}
                 <div
                   className="absolute w-full h-full backface-hidden flex flex-col rounded-xl overflow-hidden"
                   style={{ backfaceVisibility: 'hidden' }}
                 >
                   {/* Image Container */}
-                  <div className="h-56 sm:h-64 overflow-hidden">
-                    <img
+                  <div className="h-56 sm:h-64 overflow-hidden relative">
+                    <motion.img
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.5 }}
                       src={imageMap[product.image]}
                       alt={product.name}
-                      className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover"
                     />
-                    <span className="absolute top-4 left-4 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <motion.span 
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.2 }}
+                      className="absolute top-4 left-4 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-medium"
+                    >
                       {product.type}
-                    </span>
+                    </motion.span>
                   </div>
 
                   {/* Content */}
@@ -112,16 +169,18 @@ const GranitePage = () => {
                       <span className="text-xs sm:text-sm text-gray-500 ml-2">per sq ft</span>
                     </div>
 
-                    <button
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
                       className="w-full bg-gray-900 text-white py-2 sm:py-3 rounded-lg hover:bg-gray-800 transition-colors duration-300 mt-auto text-sm sm:text-base font-medium"
                       onClick={() => toggleDetails(product.id)}
                     >
                       View Details
-                    </button>
+                    </motion.button>
                   </div>
                 </div>
 
-                {/* Back side - Product details */}
+                {/* Back side */}
                 <div
                   className="absolute w-full h-full backface-hidden overflow-hidden rounded-xl"
                   style={{
@@ -172,21 +231,23 @@ const GranitePage = () => {
                     </div>
 
                     <div className="mt-5">
-                      <button
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
                         className="w-full bg-gradient-to-r from-gray-700 to-gray-900 text-white font-light tracking-wider py-2 sm:py-3 rounded-lg hover:bg-white hover:text-black transition-all duration-300 text-sm sm:text-base hover:from-white hover:to-white"
                         onClick={() => toggleDetails(product.id)}
                       >
                         Back to Product
-                      </button>
+                      </motion.button>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
