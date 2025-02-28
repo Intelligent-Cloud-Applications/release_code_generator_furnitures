@@ -1,116 +1,116 @@
 import { useState } from 'react';
-import BeigeImage from '../assets/beige.jpg';
-import RedImage from '../assets/red.jpg';
-import DownloadImage from '../assets/download.jpg';
-import WhiteImage from '../assets/white.jpg';
 import BlackImage from '../assets/blackmarble.jpg';
+import RedImage from '../assets/blackmarble.jpg';
+import GreyImage from '../assets/download.jpg';
+import BrownImage from '../assets/red.jpg';
+import GoldImage from '../assets/beige.jpg';
 
-const ProductPage = () => {
+const GranitePage = () => {
   // State to track which product's details are being shown
   const [expandedProductId, setExpandedProductId] = useState(null);
 
   const products = [
     {
       id: 1,
-      name: 'Calacatta Gold Marble',
-      price: 249.99,
-      rating: 4.8,
-      reviews: 124,
-      origin: 'Italy',
-      description: 'Luxurious white marble with distinctive gold veining',
-      imageUrl: BeigeImage,
+      name: 'Absolute Black Granite',
+      price: 179.99,
+      rating: 4.9,
+      reviews: 136,
+      origin: 'India',
+      description: 'Deep black granite with subtle flecks, perfect for elegant contrast',
+      imageUrl: BlackImage,
       type: 'Premium',
       // Additional details
-      durability: 'Medium',
-      lifetime: '50+ years with proper maintenance',
-      applications: 'Countertops, backsplashes, accent walls, and flooring in low-traffic areas',
-      maintenance: 'Seal every 6-12 months, clean with pH neutral cleaner',
+      durability: 'Very High',
+      lifetime: '75+ years with proper maintenance',
+      applications: 'Countertops, floors, exterior facades, and high-traffic commercial areas',
+      maintenance: 'Seal once a year, clean with granite-specific cleaner',
       availability: 'In stock',
     },
     {
       id: 2,
-      name: 'Statuario Marble',
-      price: 199.99,
-      rating: 4.9,
-      reviews: 89,
-      origin: 'Italy',
-      description: 'Classic white marble with elegant gray streaks',
-      imageUrl: RedImage,
-      type: 'Premium',
-      // Additional details
-      durability: 'Medium',
-      lifetime: '45+ years with proper maintenance',
-      applications: 'Countertops, vanities, and decorative features',
-      maintenance: 'Seal twice annually, clean with marble-specific cleaner',
-      availability: 'Limited stock',
-    },
-    {
-      id: 3,
-      name: 'Emperador Dark',
-      price: 179.99,
+      name: 'Baltic Brown Granite',
+      price: 159.99,
       rating: 4.7,
-      reviews: 156,
-      origin: 'Spain',
-      description: 'Rich brown marble with fine veining patterns',
-      imageUrl: DownloadImage,
+      reviews: 98,
+      origin: 'Finland',
+      description: 'Reddish-brown base with black, white, and burgundy mineral deposits',
+      imageUrl: BrownImage,
       type: 'Classic',
       // Additional details
       durability: 'High',
-      lifetime: '60+ years with proper maintenance',
-      applications: 'Flooring, countertops, fireplaces, and high-traffic areas',
+      lifetime: '65+ years with proper maintenance',
+      applications: 'Kitchen countertops, bathroom vanities, fireplace surrounds',
       maintenance: 'Seal annually, clean with pH neutral cleaner',
       availability: 'In stock',
     },
     {
-      id: 4,
-      name: 'Nero Marquina',
+      id: 3,
+      name: 'Blue Pearl Granite',
       price: 189.99,
-      rating: 4.6,
-      reviews: 92,
-      origin: 'Spain',
-      description: 'Striking black marble with white veining',
-      imageUrl: BlackImage,
+      rating: 4.8,
+      reviews: 112,
+      origin: 'Norway',
+      description: 'Iridescent blue-gray with sparkling silver and blue minerals',
+      imageUrl: GreyImage,
       type: 'Premium',
       // Additional details
-      durability: 'Medium-High',
-      lifetime: '55+ years with proper maintenance',
-      applications: 'Accent walls, feature walls, countertops, and decorative applications',
-      maintenance: 'Seal every 6 months, clean with specialized stone cleaner',
-      availability: 'In stock',
+      durability: 'High',
+      lifetime: '70+ years with proper maintenance',
+      applications: 'Countertops, feature walls, and luxury commercial installations',
+      maintenance: 'Seal annually, daily cleaning with mild cleaners',
+      availability: 'Limited stock',
+    },
+    {
+      id: 4,
+      name: 'Kashmir Gold Granite',
+      price: 219.99,
+      rating: 4.9,
+      reviews: 87,
+      origin: 'India',
+      description: 'Warm gold background with burgundy and black mineral patterns',
+      imageUrl: GoldImage,
+      type: 'Luxury',
+      // Additional details
+      durability: 'High',
+      lifetime: '65+ years with proper maintenance',
+      applications: 'Statement countertops, accent walls, and high-end installations',
+      maintenance: 'Seal every 6-12 months, clean with specialized stone cleaner',
+      availability: 'Limited stock',
     },
     {
       id: 5,
-      name: 'Carrara White',
-      price: 159.99,
-      rating: 4.8,
-      reviews: 178,
-      origin: 'Italy',
-      description: 'Timeless white marble with soft gray veining',
-      imageUrl: WhiteImage,
-      type: 'Classic',
+      name: 'Venetian Gold Granite',
+      price: 199.99,
+      rating: 4.7,
+      reviews: 104,
+      origin: 'Brazil',
+      description: 'Beige background with gold, brown, and black mineral inclusions',
+      imageUrl: GoldImage,
+      type: 'Premium',
       // Additional details
-      durability: 'Medium',
-      lifetime: '40+ years with proper maintenance',
-      applications: 'Bathrooms, vanities, and lighter-use kitchens',
-      maintenance: 'Seal every 6 months, daily cleaning with gentle cleaners',
+      durability: 'High',
+      lifetime: '60+ years with proper maintenance',
+      applications: 'Kitchen countertops, bathroom vanities, and bar tops',
+      maintenance: 'Seal every 6 months, clean with gentle granite cleaner',
       availability: 'In stock',
     },
     {
       id: 6,
-      name: 'Portoro Gold',
-      price: 299.99,
-      rating: 4.9,
-      reviews: 67,
-      origin: 'Italy',
-      description: 'Dramatic black marble with golden veining',
-      imageUrl: BlackImage,
-      type: 'Luxury',
+      name: 'Dakota Mahogany Granite',
+      price: 169.99,
+      rating: 4.6,
+      reviews: 92,
+      origin: 'USA',
+      description: 'Rich mahogany red with consistent black mineral patterns',
+      imageUrl: RedImage,
+      type: 'Classic',
       // Additional details
-      durability: 'Medium-High',
-      lifetime: '50+ years with proper maintenance',
-      applications: 'Luxury accent features, statement walls, and high-end installations',
-      maintenance: 'Seal every 6 months, clean with specialized marble cleaner',
-      availability: 'Limited stock - special order',
+      durability: 'Very High',
+      lifetime: '75+ years with proper maintenance',
+      applications: 'Exterior cladding, monuments, flooring, and countertops',
+      maintenance: 'Seal annually, minimal maintenance required',
+      availability: 'In stock',
     }
   ];
 
@@ -125,56 +125,15 @@ const ProductPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Custom scrollbar styles */}
-      <style>
-        {`
-          /* Custom Scrollbar for Product Cards */
-          .custom-scrollbar::-webkit-scrollbar {
-            width: 4px;
-          }
-
-          .custom-scrollbar::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-          }
-
-          .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-          }
-
-          .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.5);
-          }
-
-          /* Add the scroll reveal animation */
-          .scroll-reveal {
-            animation: fadeIn 0.5s ease-in-out;
-          }
-
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-              transform: translateY(10px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-        `}
-      </style>
-
       {/* Main Content Area */}
       <div className="max-w-7xl mx-auto px-4 pt-6 pb-12 sm:px-6 lg:px-8">
         {/* Heading with elegant typography - Smaller on mobile */}
         <div className="mb-12 relative">
           <h1 className="text-2xl md:text-4xl font-semibold text-gray-900 text-center mt-16 mb-2 tracking-wide">
-            Luxury Marble Collection
+            Premium Granite Collection
           </h1>
           <p className="text-center text-gray-600 max-w-2xl mx-auto font-light">
-            Discover our premium selection of natural marble stones, sourced from the finest quarries worldwide.
+            Explore our selection of durable granite stones, known for their strength and natural beauty.
           </p>
         </div>
 
@@ -281,7 +240,7 @@ const ProductPage = () => {
                   {/* Aesthetic black background with subtle gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-black to-gray-900"></div>
 
-                  {/* Subtle marble texture overlay with low opacity */}
+                  {/* Subtle granite texture overlay with low opacity */}
                   <div
                     className="absolute inset-0 bg-cover bg-center opacity-20"
                     style={{
@@ -306,8 +265,8 @@ const ProductPage = () => {
                       </div>
                     </div>
 
-                    {/* Product details with elegant styling and enhanced scrollbar */}
-                    <div className="space-y-5 flex-grow overflow-y-auto pr-1 custom-scrollbar scroll-reveal">
+                    {/* Product details with elegant styling */}
+                    <div className="space-y-5 flex-grow overflow-y-auto pr-1 custom-scrollbar">
                       {/* Specifications section */}
                       <div className="mb-5">
                         <h4 className="font-light text-base sm:text-lg tracking-wider border-l-2 border-gray-500 pl-3 mb-4">
@@ -315,27 +274,27 @@ const ProductPage = () => {
                         </h4>
 
                         <div className="grid grid-cols-1 gap-4 text-sm">
-                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
+                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm">
                             <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Durability</span>
                             <span className="text-white font-light tracking-wide">{product.durability}</span>
                           </div>
 
-                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
+                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm">
                             <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Expected Lifetime</span>
                             <span className="text-white font-light tracking-wide">{product.lifetime}</span>
                           </div>
 
-                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
+                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm">
                             <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Applications</span>
                             <span className="text-white font-light tracking-wide">{product.applications}</span>
                           </div>
 
-                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
+                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm">
                             <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Maintenance</span>
                             <span className="text-white font-light tracking-wide">{product.maintenance}</span>
                           </div>
 
-                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
+                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm">
                             <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Availability</span>
                             <span className="text-white font-light tracking-wide">{product.availability}</span>
                           </div>
@@ -363,4 +322,4 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default GranitePage;

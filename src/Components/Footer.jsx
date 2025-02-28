@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import { Facebook, Instagram } from 'lucide-react';
 
 const Footer = () => {
@@ -53,10 +53,11 @@ const Footer = () => {
               Contact
             </h3>
             <div className="space-y-3 text-gray-600">
-              <p>123 Marble Avenue</p>
-              <p>New York, NY 10001</p>
-              <p>Tel: (555) 123-4567</p>
-              <p>Email: info@marblecompany.com</p>
+              <p>Jaganju Marble & Granite </p>
+              <p>Deals in : Granite ,Marble , Slabs ,Kadappa</p>
+              <p>Location - Near Satsang Mandir , Junagard Road</p>
+              <p>Tel: 9437283071</p>
+
             </div>
           </div>
 

@@ -6,10 +6,13 @@ import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import HeroPageCards from "./Components/HeroPageCards";
 import Navbar from "./Components/Navbar";
-import Product from "./Components/Product";
+import Productsection from "./Components/Products";
 import Testimonials from "./Components/Testimonial";
 import WhatsApp from "./Components/WhatsApp";
+import Product from "./Components/Product";
+import Tile from "./Components/TileProduct";
 
+import GranitePage from "./Components/GraniteProduct";
 const HomePage = () => (
   <>
     <Hero />
@@ -29,8 +32,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Product />} />
+        <Route path="/products" element={<Productsection />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/Product" element={<Product />} />
+        <Route path="/Tile" element={<Tile />} />
+        <Route path="/granite" element={<GranitePage />} />
       </Routes>
 
       {/* WhatsApp button visible on all pages */}

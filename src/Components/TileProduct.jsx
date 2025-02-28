@@ -1,116 +1,120 @@
 import { useState } from 'react';
-import BeigeImage from '../assets/beige.jpg';
-import RedImage from '../assets/red.jpg';
-import DownloadImage from '../assets/download.jpg';
-import WhiteImage from '../assets/white.jpg';
-import BlackImage from '../assets/blackmarble.jpg';
+import ItalianPorcelainImage from '../assets/beige.jpg';
+import SpanishCeramicImage from '../assets/beige.jpg';
+import MoroccanEncausticImage from '../assets/beige.jpg';
+import SubwayImage from '../assets/beige.jpg';
+import TerrazzoDurableImage from '../assets/beige.jpg';
+import GlassImage from '../assets/beige.jpg';
 
-const ProductPage = () => {
+// Import custom scrollbar styles
+import './scrollbar.css';
+
+const TileProductPage = () => {
   // State to track which product's details are being shown
   const [expandedProductId, setExpandedProductId] = useState(null);
 
   const products = [
     {
       id: 1,
-      name: 'Calacatta Gold Marble',
-      price: 249.99,
-      rating: 4.8,
-      reviews: 124,
+      name: 'Italian Porcelain Tile',
+      price: 14.99,
+      rating: 4.9,
+      reviews: 142,
       origin: 'Italy',
-      description: 'Luxurious white marble with distinctive gold veining',
-      imageUrl: BeigeImage,
+      description: 'Durable porcelain tiles with natural stone appearance',
+      imageUrl: ItalianPorcelainImage,
       type: 'Premium',
       // Additional details
-      durability: 'Medium',
-      lifetime: '50+ years with proper maintenance',
-      applications: 'Countertops, backsplashes, accent walls, and flooring in low-traffic areas',
-      maintenance: 'Seal every 6-12 months, clean with pH neutral cleaner',
+      durability: 'Very High',
+      lifetime: '50+ years',
+      applications: 'Floors, walls, showers, outdoor patios, and high-traffic areas',
+      maintenance: 'Sweep or vacuum regularly, occasional mopping with mild cleaner',
       availability: 'In stock',
     },
     {
       id: 2,
-      name: 'Statuario Marble',
-      price: 199.99,
-      rating: 4.9,
-      reviews: 89,
-      origin: 'Italy',
-      description: 'Classic white marble with elegant gray streaks',
-      imageUrl: RedImage,
-      type: 'Premium',
-      // Additional details
-      durability: 'Medium',
-      lifetime: '45+ years with proper maintenance',
-      applications: 'Countertops, vanities, and decorative features',
-      maintenance: 'Seal twice annually, clean with marble-specific cleaner',
-      availability: 'Limited stock',
-    },
-    {
-      id: 3,
-      name: 'Emperador Dark',
-      price: 179.99,
+      name: 'Spanish Ceramic Tile',
+      price: 9.99,
       rating: 4.7,
-      reviews: 156,
+      reviews: 105,
       origin: 'Spain',
-      description: 'Rich brown marble with fine veining patterns',
-      imageUrl: DownloadImage,
+      description: 'Vibrant hand-painted ceramic tiles with traditional patterns',
+      imageUrl: SpanishCeramicImage,
       type: 'Classic',
       // Additional details
-      durability: 'High',
-      lifetime: '60+ years with proper maintenance',
-      applications: 'Flooring, countertops, fireplaces, and high-traffic areas',
-      maintenance: 'Seal annually, clean with pH neutral cleaner',
+      durability: 'Medium',
+      lifetime: '20-30 years with proper maintenance',
+      applications: 'Backsplashes, accent walls, decorative features',
+      maintenance: 'Clean with gentle soap and water, avoid abrasive cleaners',
       availability: 'In stock',
     },
     {
-      id: 4,
-      name: 'Nero Marquina',
-      price: 189.99,
-      rating: 4.6,
-      reviews: 92,
-      origin: 'Spain',
-      description: 'Striking black marble with white veining',
-      imageUrl: BlackImage,
-      type: 'Premium',
+      id: 3,
+      name: 'Moroccan Encaustic Cement Tile',
+      price: 18.99,
+      rating: 4.8,
+      reviews: 96,
+      origin: 'Morocco',
+      description: 'Handcrafted cement tiles with intricate geometric patterns',
+      imageUrl: MoroccanEncausticImage,
+      type: 'Artisan',
       // Additional details
-      durability: 'Medium-High',
-      lifetime: '55+ years with proper maintenance',
-      applications: 'Accent walls, feature walls, countertops, and decorative applications',
-      maintenance: 'Seal every 6 months, clean with specialized stone cleaner',
+      durability: 'High',
+      lifetime: '75+ years with proper maintenance',
+      applications: 'Feature floors, entryways, kitchen islands, accent walls',
+      maintenance: 'Seal annually, clean with pH neutral cleaner',
+      availability: 'Limited stock',
+    },
+    {
+      id: 4,
+      name: 'Classic Subway Tile',
+      price: 6.99,
+      rating: 4.6,
+      reviews: 188,
+      origin: 'United States',
+      description: 'Timeless white rectangular tiles with beveled edges',
+      imageUrl: SubwayImage,
+      type: 'Standard',
+      // Additional details
+      durability: 'High',
+      lifetime: '25+ years',
+      applications: 'Kitchen backsplashes, bathroom walls, shower surrounds',
+      maintenance: 'Regular cleaning with mild detergent, check grout annually',
       availability: 'In stock',
     },
     {
       id: 5,
-      name: 'Carrara White',
-      price: 159.99,
-      rating: 4.8,
-      reviews: 178,
+      name: 'Terrazzo Durable Tile',
+      price: 24.99,
+      rating: 4.9,
+      reviews: 76,
       origin: 'Italy',
-      description: 'Timeless white marble with soft gray veining',
-      imageUrl: WhiteImage,
-      type: 'Classic',
+      description: 'Contemporary terrazzo-look porcelain with colorful aggregate pattern',
+      imageUrl: TerrazzoDurableImage,
+      type: 'Premium',
       // Additional details
-      durability: 'Medium',
-      lifetime: '40+ years with proper maintenance',
-      applications: 'Bathrooms, vanities, and lighter-use kitchens',
-      maintenance: 'Seal every 6 months, daily cleaning with gentle cleaners',
+      durability: 'Very High',
+      lifetime: '50+ years',
+      applications: 'Modern floors, commercial spaces, statement walls',
+      maintenance: 'Standard cleaning, resistant to most chemicals',
       availability: 'In stock',
     },
     {
       id: 6,
-      name: 'Portoro Gold',
-      price: 299.99,
-      rating: 4.9,
-      reviews: 67,
-      origin: 'Italy',
-      description: 'Dramatic black marble with golden veining',
-      imageUrl: BlackImage,
+      name: 'Glass Mosaic Tile',
+      price: 21.99,
+      rating: 4.7,
+      reviews: 82,
+      origin: 'Japan',
+      description: 'Iridescent glass mosaic tiles with reflective properties',
+      imageUrl: GlassImage,
       type: 'Luxury',
       // Additional details
-      durability: 'Medium-High',
-      lifetime: '50+ years with proper maintenance',
-      applications: 'Luxury accent features, statement walls, and high-end installations',
-      maintenance: 'Seal every 6 months, clean with specialized marble cleaner',
-      availability: 'Limited stock - special order',
+      durability: 'Medium',
+      lifetime: '15-20 years',
+      applications: 'Backsplashes, shower accents, swimming pools, decorative features',
+      maintenance: 'Clean with glass cleaner, avoid abrasives',
+      availability: 'In stock',
     }
   ];
 
@@ -125,56 +129,15 @@ const ProductPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Custom scrollbar styles */}
-      <style>
-        {`
-          /* Custom Scrollbar for Product Cards */
-          .custom-scrollbar::-webkit-scrollbar {
-            width: 4px;
-          }
-
-          .custom-scrollbar::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-          }
-
-          .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-          }
-
-          .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.5);
-          }
-
-          /* Add the scroll reveal animation */
-          .scroll-reveal {
-            animation: fadeIn 0.5s ease-in-out;
-          }
-
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-              transform: translateY(10px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-        `}
-      </style>
-
       {/* Main Content Area */}
       <div className="max-w-7xl mx-auto px-4 pt-6 pb-12 sm:px-6 lg:px-8">
         {/* Heading with elegant typography - Smaller on mobile */}
         <div className="mb-12 relative">
           <h1 className="text-2xl md:text-4xl font-semibold text-gray-900 text-center mt-16 mb-2 tracking-wide">
-            Luxury Marble Collection
+            Designer Tile Collection
           </h1>
           <p className="text-center text-gray-600 max-w-2xl mx-auto font-light">
-            Discover our premium selection of natural marble stones, sourced from the finest quarries worldwide.
+            Explore our curated selection of ceramic, porcelain, and specialty tiles from around the world.
           </p>
         </div>
 
@@ -281,7 +244,7 @@ const ProductPage = () => {
                   {/* Aesthetic black background with subtle gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-black to-gray-900"></div>
 
-                  {/* Subtle marble texture overlay with low opacity */}
+                  {/* Subtle tile texture overlay with low opacity */}
                   <div
                     className="absolute inset-0 bg-cover bg-center opacity-20"
                     style={{
@@ -363,4 +326,4 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default TileProductPage;

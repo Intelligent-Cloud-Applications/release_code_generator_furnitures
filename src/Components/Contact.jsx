@@ -8,16 +8,26 @@ const Contact = () => {
     email: '',
     message: '',
   });
+
   const [isLoading, setIsLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState(null);
+  const [isError, setIsError] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Form validation
     if (!formData.name || !formData.email || !formData.message) {
-      return alert("All fields are required");
+      setIsError(true);
+      setResponseMessage("All fields are required.");
+      return;
     }
 
     try {
       setIsLoading(true);
+      setIsError(false);
+      setResponseMessage(null);
+
       const apiName = "main";
       const path = "/any/create-query";
       const myInit = {
@@ -30,10 +40,12 @@ const Contact = () => {
       };
 
       await API.post(apiName, path, myInit);
-      alert("Your message has been sent. We will get back to you soon.");
+      setResponseMessage("Your message has been sent successfully! 🎉");
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      alert("Failed to send message. Try again later.");
+      console.error("Error sending message:", error);
+      setIsError(true);
+      setResponseMessage("Failed to send message. Please try again later.");
     } finally {
       setIsLoading(false);
     }
@@ -53,6 +65,13 @@ const Contact = () => {
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
             Get in Touch
           </h2>
+
+          {/* Response Message */}
+          {responseMessage && (
+            <p className={`text-center text-sm mb-4 ${isError ? "text-red-600" : "text-green-600"}`}>
+              {responseMessage}
+            </p>
+          )}
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <input
@@ -100,7 +119,7 @@ const Contact = () => {
               <Mail className="inline w-5 h-5 mr-2" /> email@example.com
             </p>
             <p className="mt-1">
-              <Phone className="inline w-5 h-5 mr-2" /> +1 (555) 123-4567
+              <Phone className="inline w-5 h-5 mr-2" /> 9437283071
             </p>
           </div>
         </div>
@@ -108,5 +127,4 @@ const Contact = () => {
     </div>
   );
 };
-
 export default Contact;
