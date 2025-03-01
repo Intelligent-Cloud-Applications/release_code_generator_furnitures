@@ -2,9 +2,15 @@
 import { Link } from 'react-router-dom';
 import { useData } from '../context/context';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect } from 'react';
 
 const ProductSection = () => {
-  const { data, loading, error } = useData();
+  const { data, loading, error, checkSectionAndNavigate } = useData();
+
+  useEffect(() => {
+    // Check if products section has data
+    checkSectionAndNavigate('products');
+  }, [checkSectionAndNavigate]);
   
   if (loading) {
     return (
@@ -126,23 +132,8 @@ const ProductSection = () => {
   }
 
   if (error) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center p-8 bg-white rounded-xl shadow-lg">
-          <h2 className="text-2xl font-bold text-red-600 mb-4">Oops! Something went wrong</h2>
-          <p className="text-gray-600 mb-4">We're having trouble loading the products.</p>
-          <button 
-            onClick={() => window.location.reload()}
-            className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800"
-          >
-            Try Again
-          </button>
-        </div>
-      </div>
-    );
+    return null; // The context will handle navigation to error page
   }
-
-  const { products } = data;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -166,6 +157,30 @@ const ProductSection = () => {
     }
   };
 
+  const categories = [
+    {
+      id: 1,
+      name: "Marble",
+      description: "Discover our exquisite selection of premium marble slabs and tiles, sourced from the finest quarries around the world.",
+      image: "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/Marble.jpeg",
+      link: "/marble"
+    },
+    {
+      id: 2,
+      name: "Granite",
+      description: "Explore our extensive selection of durable, natural granite stone for countertops, flooring, and outdoor applications.",
+      image: "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite.jpeg",
+      link: "/granite"
+    },
+    {
+      id: 3,
+      name: "Tiles",
+      description: "Browse our curated selection of ceramic, porcelain, and natural stone tiles for floors, walls, and decorative accents.",
+      image: "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title.jpeg",
+      link: "/tile"
+    }
+  ];
+
   return (
     <motion.div 
       initial="hidden"
@@ -179,15 +194,15 @@ const ProductSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-semibold text-gray-900">
-            {products.hero.title}
+            Our Product Collections
           </h2>
           <p className="mt-3 text-xl text-gray-600 max-w-2xl mx-auto">
-            {products.hero.subtitle}
+            Explore our premium natural stone and tile collections for your home or commercial projects.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {products.categories.map((category, index) => (
+          {categories.map((category) => (
             <motion.div
               key={category.id}
               variants={itemVariants}
