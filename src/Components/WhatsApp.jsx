@@ -30,14 +30,14 @@ const WhatsAppButton = () => {
             className="absolute bottom-full right-0 mb-2"
           >
             <motion.div 
-              className="bg-white text-gray-800 rounded-lg px-4 py-2 shadow-lg text-sm whitespace-nowrap"
+              className="bg-[#25D366] text-white rounded-lg px-4 py-2 shadow-lg text-sm whitespace-nowrap"
               initial={{ scale: 0.95 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.2 }}
             >
               {whatsapp.tooltip.text}
               <motion.div 
-                className="absolute bottom-0 right-4 transform translate-y-1/2 rotate-45 w-2 h-2 bg-white"
+                className="absolute bottom-0 right-4 transform translate-y-1/2 rotate-45 w-2 h-2 bg-[#25D366]"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.1 }}
@@ -52,7 +52,7 @@ const WhatsAppButton = () => {
         onClick={handleWhatsAppClick}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="bg-green-500 hover:bg-green-600 text-white rounded-full p-3 shadow-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 flex items-center justify-center"
+        className="bg-[#25D366] hover:bg-[#22c15e] text-white rounded-full p-3 shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-opacity-50 flex items-center justify-center"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         initial={{ scale: 0, opacity: 0 }}
