@@ -22,7 +22,7 @@ export const DataProvider = ({ children }) => {
           // Use local data with a small delay to simulate loading
           await new Promise(resolve => setTimeout(resolve, 100));
           setContextData(initialData);
-          console.log('Local data initialized:', initialData);
+          // console.log('Local data initialized:', initialData);
         } else {
           // Fetch data from API
           const response = await API.get('main', 
@@ -34,7 +34,7 @@ export const DataProvider = ({ children }) => {
             ...initialData,
             ...response
           });
-          console.log('API data fetched:', response);
+          // console.log('API data fetched:', response);
         }
       } catch (err) {
         console.error('Error initializing data:', err);
