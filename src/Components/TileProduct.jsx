@@ -1,12 +1,6 @@
 import { useState } from 'react';
 import { useData } from '../context/context';
 import { motion, AnimatePresence } from 'framer-motion';
-import WoodLookImage from '../assets/beige.jpg';
-import MoroccanImage from '../assets/blackmarble.jpg';
-import LargeFormatImage from '../assets/download.jpg';
-import SubwayImage from '../assets/red.jpg';
-import TerrazzoDurableImage from '../assets/beige.jpg';
-import GlassImage from '../assets/blackmarble.jpg';
 
 // Import custom scrollbar styles
 import './scrollbar.css';
@@ -14,14 +8,10 @@ import './scrollbar.css';
 const TileProductPage = () => {
   const { data, loading, error } = useData();
   const [expandedProductId, setExpandedProductId] = useState(null);
+  const [loadedImages, setLoadedImages] = useState({});
 
-  const imageMap = {
-    WoodLookImage,
-    MoroccanImage,
-    LargeFormatImage,
-    SubwayImage,
-    TerrazzoDurableImage,
-    GlassImage
+  const handleImageLoad = (productId) => {
+    setLoadedImages(prev => ({ ...prev, [productId]: true }));
   };
 
   if (loading) {
@@ -113,20 +103,66 @@ const TileProductPage = () => {
                   className="absolute w-full h-full backface-hidden flex flex-col rounded-xl overflow-hidden"
                   style={{ backfaceVisibility: 'hidden' }}
                 >
-                  {/* Image Container */}
+                  {/* Image Container with Loading State */}
                   <div className="h-56 sm:h-64 overflow-hidden relative">
+                    {/* Skeleton Loader */}
+                    <AnimatePresence>
+                      {!loadedImages[product.id] && (
+                        <motion.div
+                          initial={{ opacity: 0.6 }}
+                          animate={{ 
+                            opacity: [0.6, 0.8, 0.6],
+                            transition: {
+                              repeat: Infinity,
+                              duration: 1.5
+                            }
+                          }}
+                          exit={{ opacity: 0 }}
+                          className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse"
+                        >
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <svg 
+                              className="w-10 h-10 text-gray-400 animate-spin" 
+                              viewBox="0 0 24 24"
+                            >
+                              <circle 
+                                className="opacity-25" 
+                                cx="12" 
+                                cy="12" 
+                                r="10" 
+                                stroke="currentColor" 
+                                strokeWidth="4"
+                                fill="none"
+                              />
+                              <path 
+                                className="opacity-75" 
+                                fill="currentColor" 
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                              />
+                            </svg>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
+                    {/* Actual Image */}
                     <motion.img
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: loadedImages[product.id] ? 1 : 0 }}
+                      transition={{ duration: 0.3 }}
                       whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.5 }}
-                      src={imageMap[product.image]}
+                      src={product.image}
                       alt={product.name}
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      onLoad={() => handleImageLoad(product.id)}
                     />
+                    
                     <motion.span 
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.2 }}
-                      className="absolute top-4 left-4 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-medium"
+                      className="absolute top-4 left-4 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-medium z-10"
                     >
                       {product.type}
                     </motion.span>
@@ -150,7 +186,7 @@ const TileProductPage = () => {
                         {[...Array(5)].map((_, index) => (
                           <svg
                             key={index}
-                            className={`w-4 h-4 sm:w-5 sm:h-5 ${
+                            className={`w-4 h-4 sm:w-5 sm:h-5 ₹{
                               index < Math.floor(product.rating)
                                 ? 'text-yellow-400'
                                 : 'text-gray-300'
@@ -174,7 +210,7 @@ const TileProductPage = () => {
 
                     {/* Price */}
                     <div className="bg-gray-100 rounded-lg p-3 mb-4 flex justify-center items-center">
-                      <span className="text-xl sm:text-2xl font-bold text-gray-900">${product.price}</span>
+                      <span className="text-xl sm:text-2xl font-bold text-gray-900">₹{product.price}</span>
                       <span className="text-xs sm:text-sm text-gray-500 ml-2">per sq ft</span>
                     </div>
 
@@ -205,7 +241,7 @@ const TileProductPage = () => {
                   <div
                     className="absolute inset-0 bg-cover bg-center opacity-20"
                     style={{
-                      backgroundImage: `url(${imageMap[product.image]})`
+                      backgroundImage: `url(₹{product.image})`
                     }}
                   ></div>
 
@@ -221,7 +257,7 @@ const TileProductPage = () => {
                           <span className="ml-2 text-yellow-400">{product.rating} ★</span>
                         </p>
                         <div className="bg-black bg-opacity-40 px-4 py-2 rounded-lg">
-                          <span className="text-lg sm:text-xl font-light tracking-wider text-white">${product.price}</span>
+                          <span className="text-lg sm:text-xl font-light tracking-wider text-white">₹{product.price}</span>
                         </div>
                       </div>
                     </div>

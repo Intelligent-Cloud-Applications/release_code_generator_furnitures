@@ -1,19 +1,15 @@
 import { useState, useEffect } from "react";
 import { useData } from "../context/context";
 import { motion, AnimatePresence } from "framer-motion";
-import bg1 from "../assets/background1.jpg";
-import bg2 from "../assets/red.jpg";
-import bg3 from "../assets/download.jpg";
 
 const Hero = () => {
   const { data, loading, error } = useData();
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [loadedImages, setLoadedImages] = useState({});
 
-  const imageMap = {
-    bg1,
-    bg2,
-    bg3
+  const handleImageLoad = (index) => {
+    setLoadedImages(prev => ({ ...prev, [index]: true }));
   };
 
   useEffect(() => {
@@ -30,12 +26,59 @@ const Hero = () => {
 
   if (loading) {
     return (
-      <div className="h-screen flex items-center justify-center bg-gray-900">
-        <motion.div 
-          animate={{ rotate: 360 }}
-          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-          className="w-12 h-12 border-4 border-gray-300 border-t-transparent rounded-full"
-        />
+      <div className="h-screen bg-gray-900">
+        <div className="relative w-full h-full">
+          {/* Loading Skeleton */}
+          <div className="absolute inset-0">
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800"
+              animate={{ 
+                opacity: [0.5, 0.8, 0.5],
+                transition: {
+                  repeat: Infinity,
+                  duration: 1.5
+                }
+              }}
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <motion.div 
+                  className="w-64 h-8 bg-gray-700 rounded-lg mx-auto mb-4"
+                  animate={{ 
+                    opacity: [0.5, 0.8, 0.5],
+                    transition: {
+                      repeat: Infinity,
+                      duration: 1.5,
+                      delay: 0.2
+                    }
+                  }}
+                />
+                <motion.div 
+                  className="w-48 h-6 bg-gray-700 rounded-lg mx-auto mb-8"
+                  animate={{ 
+                    opacity: [0.5, 0.8, 0.5],
+                    transition: {
+                      repeat: Infinity,
+                      duration: 1.5,
+                      delay: 0.3
+                    }
+                  }}
+                />
+                <motion.div 
+                  className="w-96 h-4 bg-gray-700 rounded-lg mx-auto"
+                  animate={{ 
+                    opacity: [0.5, 0.8, 0.5],
+                    transition: {
+                      repeat: Infinity,
+                      duration: 1.5,
+                      delay: 0.4
+                    }
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -76,13 +119,54 @@ const Hero = () => {
                 transition={{ duration: 0.7, ease: "easeInOut" }}
                 className="absolute inset-0 w-full h-full"
               >
+                {/* Loading Skeleton */}
+                <AnimatePresence>
+                  {!loadedImages[index] && (
+                    <motion.div
+                      initial={{ opacity: 0.6 }}
+                      animate={{ 
+                        opacity: [0.6, 0.8, 0.6],
+                        transition: {
+                          repeat: Infinity,
+                          duration: 1.5
+                        }
+                      }}
+                      exit={{ opacity: 0 }}
+                      className="absolute inset-0 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800"
+                    >
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <svg 
+                          className="w-16 h-16 text-gray-400 animate-spin" 
+                          viewBox="0 0 24 24"
+                        >
+                          <circle 
+                            className="opacity-25" 
+                            cx="12" 
+                            cy="12" 
+                            r="10" 
+                            stroke="currentColor" 
+                            strokeWidth="4"
+                            fill="none"
+                          />
+                          <path 
+                            className="opacity-75" 
+                            fill="currentColor" 
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          />
+                        </svg>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
                 {/* Background Image */}
                 <motion.div
                   initial={{ scale: 1.1 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.7 }}
                   className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${imageMap[slide.image]})` }}
+                  style={{ backgroundImage: `url(${slide.image})` }}
+                  onLoad={() => handleImageLoad(index)}
                 />
 
                 {/* Gradient Overlay */}
@@ -132,8 +216,6 @@ const Hero = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       href={hero.button.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="group relative px-8 py-4 rounded-full font-semibold text-gray-900 tracking-wide overflow-hidden bg-gradient-to-r from-gray-200 to-gray-300 shadow-md border border-gray-300 transition-all duration-500 ease-in-out hover:shadow-lg hover:border-gray-400"
                     >
                       <span className="relative z-10">{hero.button.text}</span>

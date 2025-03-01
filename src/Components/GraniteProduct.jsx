@@ -1,22 +1,14 @@
 import { useState } from 'react';
 import { useData } from '../context/context';
 import { motion, AnimatePresence } from 'framer-motion';
-import BlackImage from '../assets/blackmarble.jpg';
-import RedImage from '../assets/blackmarble.jpg';
-import GreyImage from '../assets/download.jpg';
-import BrownImage from '../assets/red.jpg';
-import GoldImage from '../assets/beige.jpg';
 
 const GranitePage = () => {
   const { data, loading, error } = useData();
   const [expandedProductId, setExpandedProductId] = useState(null);
+  const [loadedImages, setLoadedImages] = useState({});
 
-  const imageMap = {
-    BlackImage,
-    RedImage,
-    GreyImage,
-    BrownImage,
-    GoldImage
+  const handleImageLoad = (productId) => {
+    setLoadedImages(prev => ({ ...prev, [productId]: true }));
   };
 
   if (loading) {
@@ -108,14 +100,59 @@ const GranitePage = () => {
                   className="absolute w-full h-full backface-hidden flex flex-col rounded-xl overflow-hidden"
                   style={{ backfaceVisibility: 'hidden' }}
                 >
-                  {/* Image Container */}
+                  {/* Image Container with Loading State */}
                   <div className="h-56 sm:h-64 overflow-hidden relative">
+                    {/* Skeleton Loader */}
+                    <AnimatePresence>
+                      {!loadedImages[product.id] && (
+                        <motion.div
+                          initial={{ opacity: 0.6 }}
+                          animate={{ 
+                            opacity: [0.6, 0.8, 0.6],
+                            transition: {
+                              repeat: Infinity,
+                              duration: 1.5
+                            }
+                          }}
+                          exit={{ opacity: 0 }}
+                          className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse"
+                        >
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <svg 
+                              className="w-10 h-10 text-gray-400 animate-spin" 
+                              viewBox="0 0 24 24"
+                            >
+                              <circle 
+                                className="opacity-25" 
+                                cx="12" 
+                                cy="12" 
+                                r="10" 
+                                stroke="currentColor" 
+                                strokeWidth="4"
+                                fill="none"
+                              />
+                              <path 
+                                className="opacity-75" 
+                                fill="currentColor" 
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                              />
+                            </svg>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
+                    {/* Actual Image */}
                     <motion.img
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: loadedImages[product.id] ? 1 : 0 }}
+                      transition={{ duration: 0.3 }}
                       whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.5 }}
-                      src={imageMap[product.image]}
+                      src={product.image}
                       alt={product.name}
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      onLoad={() => handleImageLoad(product.id)}
                     />
                     <motion.span 
                       initial={{ opacity: 0, x: -20 }}
@@ -143,7 +180,7 @@ const GranitePage = () => {
                         {[...Array(5)].map((_, index) => (
                           <svg
                             key={index}
-                            className={`w-4 h-4 sm:w-5 sm:h-5 ${
+                            className={`w-4 h-4 sm:w-5 sm:h-5 ₹{
                               index < Math.floor(product.rating)
                                 ? 'text-yellow-400'
                                 : 'text-gray-300'
@@ -165,7 +202,7 @@ const GranitePage = () => {
                     </p>
 
                     <div className="bg-gray-100 rounded-lg p-3 mb-4 flex justify-center items-center">
-                      <span className="text-xl sm:text-2xl font-bold text-gray-900">${product.price}</span>
+                      <span className="text-xl sm:text-2xl font-bold text-gray-900">₹{product.price}</span>
                       <span className="text-xs sm:text-sm text-gray-500 ml-2">per sq ft</span>
                     </div>
 
@@ -192,7 +229,7 @@ const GranitePage = () => {
                   <div
                     className="absolute inset-0 bg-cover bg-center opacity-20"
                     style={{
-                      backgroundImage: `url(${imageMap[product.image]})`
+                      backgroundImage: `url(₹{product.image})`
                     }}
                   ></div>
 
@@ -206,7 +243,7 @@ const GranitePage = () => {
                           <span className="ml-2 text-yellow-400">{product.rating} ★</span>
                         </p>
                         <div className="bg-black bg-opacity-40 px-4 py-2 rounded-lg">
-                          <span className="text-lg sm:text-xl font-light tracking-wider text-white">${product.price}</span>
+                          <span className="text-lg sm:text-xl font-light tracking-wider text-white">₹{product.price}</span>
                         </div>
                       </div>
                     </div>
@@ -247,6 +284,30 @@ const GranitePage = () => {
           ))}
         </div>
       </div>
+
+      {/* Custom scrollbar styles */}
+      <style>
+        {`
+          .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+          }
+
+          .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+          }
+
+          .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+          }
+
+          .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+          }
+        `}
+      </style>
     </motion.div>
   );
 };

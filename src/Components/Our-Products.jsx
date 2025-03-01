@@ -1,28 +1,126 @@
 //import React from 'react';
 import { Link } from 'react-router-dom';
 import { useData } from '../context/context';
-import { motion } from 'framer-motion';
-import BeigeImage from '../assets/beige.jpg';
-import GrayImage from '../assets/blackmarble.jpg';
-import CeramicImage from '../assets/red.jpg';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const ProductSection = () => {
   const { data, loading, error } = useData();
   
-  const imageMap = {
-    BeigeImage,
-    GrayImage,
-    CeramicImage
-  };
-
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <motion.div 
-          animate={{ rotate: 360 }}
-          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-          className="w-12 h-12 border-4 border-gray-900 border-t-transparent rounded-full"
-        />
+      <div className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Skeleton for title */}
+          <div className="text-center mb-12">
+            <motion.div 
+              className="h-8 w-64 mx-auto bg-gray-200 rounded-lg mb-3"
+              animate={{ 
+                opacity: [0.6, 0.8, 0.6],
+                transition: {
+                  repeat: Infinity,
+                  duration: 1.5
+                }
+              }}
+            />
+            <motion.div 
+              className="h-4 w-96 mx-auto bg-gray-200 rounded-lg"
+              animate={{ 
+                opacity: [0.6, 0.8, 0.6],
+                transition: {
+                  repeat: Infinity,
+                  duration: 1.5,
+                  delay: 0.2
+                }
+              }}
+            />
+          </div>
+
+          {/* Skeleton for product cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-xl shadow-sm overflow-hidden"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                {/* Image skeleton */}
+                <div className="relative h-64">
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200"
+                    animate={{ 
+                      opacity: [0.6, 0.8, 0.6],
+                      transition: {
+                        repeat: Infinity,
+                        duration: 1.5
+                      }
+                    }}
+                  >
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <svg 
+                        className="w-10 h-10 text-gray-400 animate-spin" 
+                        viewBox="0 0 24 24"
+                      >
+                        <circle 
+                          className="opacity-25" 
+                          cx="12" 
+                          cy="12" 
+                          r="10" 
+                          stroke="currentColor" 
+                          strokeWidth="4"
+                          fill="none"
+                        />
+                        <path 
+                          className="opacity-75" 
+                          fill="currentColor" 
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        />
+                      </svg>
+                    </div>
+                  </motion.div>
+                </div>
+
+                {/* Content skeleton */}
+                <div className="p-6">
+                  <motion.div 
+                    className="h-6 w-32 bg-gray-200 rounded-lg mb-4"
+                    animate={{ 
+                      opacity: [0.6, 0.8, 0.6],
+                      transition: {
+                        repeat: Infinity,
+                        duration: 1.5,
+                        delay: 0.3
+                      }
+                    }}
+                  />
+                  <motion.div 
+                    className="h-4 w-full bg-gray-200 rounded-lg mb-2"
+                    animate={{ 
+                      opacity: [0.6, 0.8, 0.6],
+                      transition: {
+                        repeat: Infinity,
+                        duration: 1.5,
+                        delay: 0.4
+                      }
+                    }}
+                  />
+                  <motion.div 
+                    className="h-4 w-3/4 bg-gray-200 rounded-lg"
+                    animate={{ 
+                      opacity: [0.6, 0.8, 0.6],
+                      transition: {
+                        repeat: Infinity,
+                        duration: 1.5,
+                        delay: 0.5
+                      }
+                    }}
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     );
   }
@@ -107,9 +205,10 @@ const ProductSection = () => {
                     <motion.img
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.5 }}
-                      src={imageMap[category.image]}
+                      src={category.image}
                       alt={category.name}
                       className="w-full h-64 object-cover"
+                      loading="lazy"
                     />
                     <motion.div 
                       initial={{ opacity: 0 }}
