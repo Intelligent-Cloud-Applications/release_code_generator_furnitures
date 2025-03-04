@@ -1,11 +1,13 @@
 import { CheckCircle, Gem, Settings, Heart, Clock } from "lucide-react";
 import { useData } from "../context/context";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const AboutUs = () => {
   const { data, loading, error } = useData();
   const { aboutUs } = data;
-  
+  const navigate = useNavigate();
+
   const iconComponents = {
     Gem: <Gem className="w-6 h-6" />,
     Settings: <Settings className="w-6 h-6" />,
@@ -17,7 +19,7 @@ const AboutUs = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <motion.div 
+        <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
           className="w-12 h-12 border-4 border-gray-900 border-t-transparent rounded-full"
@@ -32,7 +34,7 @@ const AboutUs = () => {
         <div className="text-center p-8 bg-white rounded-xl shadow-lg">
           <h2 className="text-2xl font-bold text-red-600 mb-4">Oops! Something went wrong</h2>
           <p className="text-gray-600 mb-4">We're having trouble loading the content.</p>
-          <button 
+          <button
             onClick={() => window.location.reload()}
             className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800"
           >
@@ -46,19 +48,19 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Hero Section */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
         className="relative h-64 bg-gray-900 overflow-hidden"
       >
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-40" 
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-40"
           style={{ backgroundImage: `url('${aboutUs.hero.backgroundImage}')` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/40" />
         <div className="relative h-full max-w-6xl mx-auto px-4 flex items-center">
-          <motion.h1 
+          <motion.h1
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -74,7 +76,7 @@ const AboutUs = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left Column */}
           <div className="space-y-12">
-            <motion.div 
+            <motion.div
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -84,7 +86,7 @@ const AboutUs = () => {
               <p className="text-gray-600 text-lg leading-relaxed">{aboutUs.story.content}</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
@@ -96,7 +98,7 @@ const AboutUs = () => {
           </div>
 
           {/* Right Column */}
-          <motion.div 
+          <motion.div
             initial={{ x: 20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.6 }}
@@ -105,7 +107,7 @@ const AboutUs = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-8">{aboutUs.benefits.title}</h2>
             <div className="space-y-6">
               {aboutUs.benefits.items.map((benefit, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
@@ -126,16 +128,18 @@ const AboutUs = () => {
         </div>
 
         {/* CTA Section */}
-        <motion.div 
+        <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 1.2 }}
           className="mt-16 text-center"
         >
-          <button 
+          <button
             className="inline-flex items-center px-8 py-4 bg-gray-900 text-white text-lg font-semibold rounded-xl hover:bg-gray-800 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             tabIndex={0}
             aria-label="Get a quote"
+            onClick={() => navigate("/contact")}
+
           >
             {aboutUs.cta.text}
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

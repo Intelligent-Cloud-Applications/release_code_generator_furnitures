@@ -42,7 +42,7 @@ const FAQItem = ({ question, answer }) => {
         <span className="flex-1 pr-4">{question}</span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ 
+          transition={{
             duration: 0.4,
             ease: [0.4, 0, 0.2, 1]
           }}
@@ -55,8 +55,8 @@ const FAQItem = ({ question, answer }) => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ 
-              opacity: 1, 
+            animate={{
+              opacity: 1,
               height: "auto",
               transition: {
                 height: {
@@ -69,7 +69,7 @@ const FAQItem = ({ question, answer }) => {
                 }
               }
             }}
-            exit={{ 
+            exit={{
               opacity: 0,
               height: 0,
               transition: {
@@ -86,8 +86,8 @@ const FAQItem = ({ question, answer }) => {
           >
             <motion.div
               initial={{ opacity: 0, y: -10 }}
-              animate={{ 
-                opacity: 1, 
+              animate={{
+                opacity: 1,
                 y: 0,
                 transition: {
                   duration: 0.3,
@@ -95,8 +95,8 @@ const FAQItem = ({ question, answer }) => {
                   delay: 0.1
                 }
               }}
-              exit={{ 
-                opacity: 0, 
+              exit={{
+                opacity: 0,
                 y: -10,
                 transition: {
                   duration: 0.2,
@@ -120,7 +120,7 @@ const FAQ = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <motion.div 
+        <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
           className="w-12 h-12 border-4 border-gray-900 border-t-transparent rounded-full"
@@ -135,7 +135,7 @@ const FAQ = () => {
         <div className="text-center p-8 bg-white rounded-xl shadow-lg">
           <h2 className="text-2xl font-bold text-red-600 mb-4">Oops! Something went wrong</h2>
           <p className="text-gray-600 mb-4">We're having trouble loading the FAQ content.</p>
-          <button 
+          <button
             onClick={() => window.location.reload()}
             className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800"
           >
@@ -151,7 +151,7 @@ const FAQ = () => {
   return (
     <div className="bg-gradient-to-br from-zinc-50 to-stone-100 py-12">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -178,7 +178,7 @@ const FAQ = () => {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
@@ -187,7 +187,8 @@ const FAQ = () => {
           <p className="text-gray-600">
             {faq.contact.text}{' '}
             <a
-              href="#contact"
+
+              href="/contact"
               className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200"
               tabIndex={0}
               aria-label="Contact our team for more questions"

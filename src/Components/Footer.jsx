@@ -1,25 +1,18 @@
-//import React from 'react';
-import { Facebook, Instagram } from 'lucide-react';
 import { useData } from '../context/context';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
   const { data, loading, error } = useData();
-  
+
   if (loading || error) {
     return null; // Footer should silently wait for data or handle errors gracefully
   }
 
   const { footer } = data;
-  
-  const iconComponents = {
-    Facebook: Facebook,
-    Instagram: Instagram
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.2
@@ -29,8 +22,8 @@ const Footer = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.5,
@@ -40,7 +33,7 @@ const Footer = () => {
   };
 
   return (
-    <motion.footer 
+    <motion.footer
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -55,7 +48,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               {footer.quickLinks.items.map((link, index) => (
-                <motion.li 
+                <motion.li
                   key={link.name}
                   variants={itemVariants}
                   custom={index}
@@ -77,7 +70,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold text-gray-800 mb-6 relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-2 after:w-10 after:h-0.5 after:bg-gray-400">
               {footer.contact.title}
             </h3>
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="space-y-3 text-gray-600"
             >
@@ -87,41 +80,10 @@ const Footer = () => {
               <p>Tel: {footer.contact.phone}</p>
             </motion.div>
           </motion.div>
-
-          {/* Social Section */}
-          <motion.div variants={itemVariants} className="text-center">
-            <h3 className="text-xl font-semibold text-gray-800 mb-6 relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-2 after:w-10 after:h-0.5 after:bg-gray-400">
-              {footer.social.title}
-            </h3>
-            <p className="text-gray-600 mb-4">
-              {footer.social.description}
-            </p>
-            <motion.div 
-              variants={itemVariants}
-              className="flex justify-center space-x-4"
-            >
-              {footer.social.links.map(({ name, href, icon, hoverClass }) => {
-                const Icon = iconComponents[icon];
-                return (
-                  <motion.a
-                    key={name}
-                    href={href}
-                    className={`w-10 h-10 border border-gray-400 rounded-full flex items-center justify-center text-gray-600 hover:text-white transition-all duration-300 ${hoverClass}`}
-                    aria-label={name}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    tabIndex={0}
-                  >
-                    <Icon size={20} />
-                  </motion.a>
-                );
-              })}
-            </motion.div>
-          </motion.div>
         </div>
 
         {/* Bottom Bar */}
-        <motion.div 
+        <motion.div
           variants={itemVariants}
           className="mt-12 pt-8 border-t border-gray-200"
         >

@@ -2,1196 +2,1207 @@
   "institutionid": "jaganjuMarble1234",
   "index": "0",
   "aboutUs": {
-    "hero": {
-      "title": "123About Us",
-      "backgroundImage": "/api/placeholder/1920/400"
-    },
-    "story": {
-      "title": "Our Story",
-      "content": "Welcome to MarbleWorks, where craftsmanship meets excellence. With years of experience in the industry, we specialize in providing high-quality marble solutions for both residential and commercial projects."
-    },
-    "mission": {
-      "title": "Our Mission",
-      "content": "Our mission is to deliver premium marble products that enhance the beauty and value of every space. We take pride in sourcing the finest materials and combining them with expert craftsmanship to create timeless and durable designs."
-    },
-    "benefits": {
-      "title": "Why Choose Us?",
-      "items": [
-        {
-          "icon": "Gem",
-          "title": "High-quality, natural marble",
-          "description": "Sourced from the finest quarries worldwide"
-        },
-        {
-          "icon": "Settings",
-          "title": "Custom design and fabrication",
-          "description": "Tailored to your specific requirements"
-        },
-        {
-          "icon": "CheckCircle",
-          "title": "Expert craftsmanship",
-          "description": "Skilled artisans with years of experience"
-        },
-        {
-          "icon": "Heart",
-          "title": "Exceptional customer service",
-          "description": "Dedicated support throughout your project"
-        },
-        {
-          "icon": "Clock",
-          "title": "Timely project completion",
-          "description": "Committed to meeting deadlines"
-        }
-      ]
-    },
-    "cta": {
-      "text": "Get a Quote"
-    }
+   "benefits": {
+    "items": [
+     {
+      "description": "Sourced from the finest quarries worldwide",
+      "icon": "Gem",
+      "title": "High-quality, natural marble"
+     },
+     {
+      "description": "Tailored to your specific requirements",
+      "icon": "Settings",
+      "title": "Custom design and fabrication"
+     },
+     {
+      "description": "Skilled artisans with years of experience",
+      "icon": "CheckCircle",
+      "title": "Expert craftsmanship"
+     },
+     {
+      "description": "Dedicated support throughout your project",
+      "icon": "Heart",
+      "title": "Exceptional customer service"
+     },
+     {
+      "description": "Committed to meeting deadlines",
+      "icon": "Clock",
+      "title": "Timely project completion"
+     }
+    ],
+    "title": "Why Choose Us?"
+   },
+   "cta": {
+    "text": "Get a Quote"
+   },
+   "hero": {
+    "backgroundImage": "/api/placeholder/1920/400",
+    "title": "About Us"
+   },
+   "mission": {
+    "content": "Our mission is to deliver premium marble products that enhance the beauty and value of every space. We take pride in sourcing the finest materials and combining them with expert craftsmanship to create timeless and durable designs.",
+    "title": "Our Mission"
+   },
+   "story": {
+    "content": "Welcome to MarbleWorks, where craftsmanship meets excellence. With years of experience in the industry, we specialize in providing high-quality marble solutions for both residential and commercial projects.",
+    "title": "Our Story"
+   }
+  },
+  "companyName": "Jaganju granite and marble shop",
+  "contact": {
+   "form": {
+    "emailPlaceholder": "your@email.com",
+    "errorMessage": "Something went wrong. Please try again.",
+    "loadingText": "Sending...",
+    "messagePlaceholder": "Your message",
+    "namePlaceholder": "Your name",
+    "subjectPlaceholder": "Subject",
+    "submitButton": "Send Message",
+    "successMessage": "Your message has been sent. We will get back to you as soon as possible."
+   },
+   "hero": {
+    "subtitle": "Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "title": "Get in Touch"
+   },
+   "info": {
+    "address": "Junagarh Road, Bhawanipatna, Kalahandi -766002",
+    "email": "rahulsenapati787@gmail.com",
+    "hours": "Monday - Saturday: 9:00 AM - 6:00 PM",
+    "phone": "+91 94372 83071"
+   }
   },
   "faq": {
-    "hero": {
-      "title": "Frequently Asked Questions",
-      "subtitle": "Find answers to common questions about our marble products and services"
+   "contact": {
+    "linkText": "Contact our team",
+    "text": "Still have questions?"
+   },
+   "hero": {
+    "subtitle": "Find answers to common questions about our marble products and services",
+    "title": "Frequently Asked Questions"
+   },
+   "items": [
+    {
+     "answer": "We offer a wide range of marble, including Italian, Indian, Turkish, and other imported varieties. Some popular types include Carrara, Statuario, Calacatta, Makrana, and Onyx.",
+     "question": "What types of marble do you offer?"
     },
-    "items": [
-      {
-        "question": "What is marble?",
-        "answer": "Marble is a natural stone used for construction and decoration."
-      },
-      {
-        "question": "How do I order marble?",
-        "answer": "You can place an order via our website or contact our sales team."
-      },
-      {
-        "question": "Where can I learn more about marble?",
-        "answer": {
-          "type": "link",
-          "text": "awsaiapp.com",
-          "url": "https://awsaiapp.com/"
-        }
-      }
-    ],
-    "contact": {
-      "text": "Still have questions?",
-      "linkText": "Contact our team"
+    {
+     "answer": "You can request a quote through our website by providing details like the type of marble, quantity, and dimensions you require.",
+     "question": "How can I get a price quote for marble?"
+    },
+    {
+     "answer": "Natural marble is a naturally occurring stone, while engineered marble is man-made using marble dust and resin. Natural marble is more luxurious, whereas engineered marble is more consistent in pattern and color.",
+     "question": "What is the difference between natural and engineered marble?"
     }
+   ]
   },
   "footer": {
-    "quickLinks": {
-      "title": "Quick Links",
-      "items": [
-        { "name": "Our Collections", "href": "#" },
-        { "name": "Custom Projects", "href": "#" },
-        { "name": "Installation Services", "href": "#" },
-        { "name": "Maintenance Guide", "href": "#" }
-      ]
-    },
-    "contact": {
-      "title": "Contact",
-      "companyName": "Jaganju Marble & Granite",
-      "description": "Deals in : Granite ,Marble , Slabs ,Kadappa",
-      "location": "Location - Near Satsang Mandir , Junagard Road",
-      "phone": "9437283071"
-    },
-    "social": {
-      "title": "Connect With Us",
-      "description": "Follow us on social media for updates and inspiration",
-      "links": [
-        {
-          "name": "Facebook",
-          "href": "#",
-          "icon": "Facebook",
-          "hoverClass": "hover:bg-[#1877F2] hover:border-[#1877F2]"
-        },
-        {
-          "name": "Instagram",
-          "href": "#",
-          "icon": "Instagram",
-          "hoverClass": "hover:bg-gradient-to-r hover:from-[#405DE6] hover:via-[#E1306C] hover:to-[#FFDC80] hover:border-[#E1306C]"
-        }
-      ]
-    },
-    "copyright": {
-      "text": "Marble Company. All rights reserved."
-    }
+   "contact": {
+    "companyName": "Jaganju Marble & Granite",
+    "description": "Deals in : Granite ,Marble , Slabs ,Kadappa",
+    "location": "Location - Near Satsang Mandir , Junagard Road",
+    "phone": "9437283071",
+    "title": "Contact"
+   },
+   "copyright": {
+    "text": "Marble Company. All rights reserved."
+   },
+   "quickLinks": {
+    "items": [
+     {
+      "href": "#",
+      "name": "Our Collections"
+     },
+     {
+      "href": "#",
+      "name": "Custom Projects"
+     },
+     {
+      "href": "#",
+      "name": "Installation Services"
+     },
+     {
+      "href": "#",
+      "name": "Maintenance Guide"
+     }
+    ],
+    "title": "Quick Links"
+   },
+   "social": {
+    "description": "Follow us on social media for updates and inspiration",
+    "links": [
+     {
+      "hoverClass": "hover:bg-[#1877F2] hover:border-[#1877F2]",
+      "href": "#",
+      "icon": "Facebook",
+      "name": "Facebook"
+     },
+     {
+      "hoverClass": "hover:bg-gradient-to-r hover:from-[#405DE6] hover:via-[#E1306C] hover:to-[#FFDC80] hover:border-[#E1306C]",
+      "href": "#",
+      "icon": "Instagram",
+      "name": "Instagram"
+     }
+    ],
+    "title": "Connect With Us"
+   }
   },
   "granite": {
-    "hero": {
-      "title": "Premium Granite Collection",
-      "subtitle": "Explore our selection of durable granite stones, known for their strength and natural beauty."
+   "hero": {
+    "subtitle": "Explore our selection of durable granite stones, known for their strength and natural beauty.",
+    "title": "Premium Granite Collection"
+   },
+   "products": [
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 1,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Beige+white+Granite.jpeg",
+     "name": "Beige White Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
     },
-    "products": [
-      {
-        "id": 1,
-        "name": "Beige White Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Beige+white+Granite.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Beige Black Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Black+beige+dot+Granite.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Black Beige Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Black+beige+Granite.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Black Blue Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Black+blue+Granite.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Black Red Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Black+red+Granite.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 6,
-        "name": "Black White Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Black+white+Granite.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 7,
-        "name": "Blue Black Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Blue+black+granite.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 8,
-        "name": "Blue Brown Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Blue+brown+Granite.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 9,
-        "name": "Blue Red Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Blue+red+Granite.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 10,
-        "name": "Blue White Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Blue+white.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 11,
-        "name": "Grey White Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Grey+white+Granite.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 12,
-        "name": "Offwhite Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Offwhite+Granite.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 13,
-        "name": "Red Black Dot Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Red+black+dot+Granite.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 14,
-        "name": "Red Black Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Red+black+Granite.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 15,
-        "name": "Royal Blue Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Royal+blue+Granite.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 16,
-        "name": "Turquoise Black Granite",
-        "price": "100 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Turquoise+black.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      }
-    ]
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 2,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Black+beige+dot+Granite.jpeg",
+     "name": "Beige Black Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 3,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Black+beige+Granite.jpeg",
+     "name": "Black Beige Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 4,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Black+blue+Granite.jpeg",
+     "name": "Black Blue Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 5,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Black+red+Granite.jpeg",
+     "name": "Black Red Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 6,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Black+white+Granite.jpeg",
+     "name": "Black White Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 7,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Blue+black+granite.jpeg",
+     "name": "Blue Black Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 8,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Blue+brown+Granite.jpeg",
+     "name": "Blue Brown Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 9,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Blue+red+Granite.jpeg",
+     "name": "Blue Red Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 10,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Blue+white.jpeg",
+     "name": "Blue White Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 11,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Grey+white+Granite.jpeg",
+     "name": "Grey White Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 12,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Offwhite+Granite.jpeg",
+     "name": "Offwhite Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 13,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Red+black+dot+Granite.jpeg",
+     "name": "Red Black Dot Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 14,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Red+black+Granite.jpeg",
+     "name": "Red Black Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 15,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Royal+blue+Granite.jpeg",
+     "name": "Royal Blue Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Deep black granite with subtle flecks, perfect for elegant contrast",
+     "id": 16,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite/Turquoise+black.jpeg",
+     "name": "Turquoise Black Granite",
+     "origin": "India",
+     "price": "100 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    }
+   ]
   },
   "hero": {
-    "slides": [
-      {
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/hero.jpeg",
-        "title": "Premium Natural Stone",
-        "subtitle": "Crafting Elegance",
-        "description": "Discover the finest selection of natural stones for your dream space"
-      },
-      {
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/Marble.jpeg",
-        "title": "Luxury Marble",
-        "subtitle": "Collection",
-        "description": "Timeless elegance for your space"
-      },
-      {
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite.jpeg",
-        "title": "Premium Granite",
-        "subtitle": "Selection",
-        "description": "Durability meets sophistication"
-      },
-      {
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title.jpeg",
-        "title": "Designer Tiles",
-        "subtitle": "Showcase",
-        "description": "Transform your spaces with style"
-      }
-    ],
-    "settings": {
-      "slideInterval": 5000
+   "button": {
+    "text": "Explore Now",
+    "url": "/products"
+   },
+   "settings": {
+    "slideInterval": 5000
+   },
+   "slides": [
+    {
+     "description": "Discover the finest selection of natural stones for your dream space",
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/hero.jpeg",
+     "subtitle": "Crafting Elegance",
+     "title": "Premium Natural Stone"
     },
-    "button": {
-      "text": "Explore Now",
-      "url": "/products"
+    {
+     "description": "Timeless elegance for your space",
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/Marble.jpeg",
+     "subtitle": "Collection",
+     "title": "Luxury Marble"
+    },
+    {
+     "description": "Durability meets sophistication",
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite.jpeg",
+     "subtitle": "Selection",
+     "title": "Premium Granite"
+    },
+    {
+     "description": "Transform your spaces with style",
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title.jpeg",
+     "subtitle": "Showcase",
+     "title": "Designer Tiles"
     }
+   ]
   },
+  "institutionType": "Marble shop",
   "marble": {
-    "hero": {
-      "title": "Luxury Marble Collection",
-      "subtitle": "Timeless elegance for your space"
+   "hero": {
+    "subtitle": "Timeless elegance for your space",
+    "title": "Luxury Marble Collection"
+   },
+   "products": [
+    {
+     "description": "Elegant marble with distinctive patterns, perfect for luxurious interiors",
+     "id": 1,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Amazon+Marble.jpeg",
+     "name": "Amazon Marble",
+     "origin": "India",
+     "price": "120 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
     },
-    "products": [
-      {
-        "id": 1,
-        "name": "Amazon Marble",
-        "price": "120 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Elegant marble with distinctive patterns, perfect for luxurious interiors",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Amazon+Marble.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Amazon Real Marble",
-        "price": "120 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Natural marble with unique veining, ideal for sophisticated spaces",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Amazon+real+Marble.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Aravalli Marble",
-        "price": "120 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Classic marble with subtle patterns, perfect for traditional designs",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Aravalli+Marble.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Armanitwisty Marble",
-        "price": "120 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Modern marble with dynamic patterns, perfect for contemporary spaces",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Armanitwisty+Marble.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Arzentina Marble",
-        "price": "120 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Premium marble with striking patterns, ideal for luxury projects",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Arzentina+Marble.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 6,
-        "name": "Azzaro Gris Marble",
-        "price": "120 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Sophisticated grey marble, perfect for modern interiors",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Azzaro+Gris+Marble.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 7,
-        "name": "Beige Brown Marble",
-        "price": "120 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Warm-toned marble with natural elegance, ideal for classic designs",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Beige+Brown+Marble.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 8,
-        "name": "Cristol Sarvario Marble",
-        "price": "120 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Crystal-like marble with unique patterns, perfect for luxury spaces",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Cristol+sarvario+Marble.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 9,
-        "name": "Dragon Red Marble",
-        "price": "120 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Bold red marble with dramatic patterns, ideal for statement pieces",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Dragon+Red+Marble.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 10,
-        "name": "Onexy Silver Marble",
-        "price": "120 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Sleek silver marble with onyx-like patterns, perfect for modern designs",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Onexy+Silver+Marble.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 11,
-        "name": "Satvariolipsa Blue Marble",
-        "price": "120 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Unique blue-toned marble with distinctive veining, ideal for luxury interiors",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Satvariolipsa+blue+Marble.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 12,
-        "name": "Tara Silver Marble",
-        "price": "120 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Elegant silver marble with subtle patterns, perfect for sophisticated spaces",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Tara+Silver+Marble.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 13,
-        "name": "Tropic White Marble",
-        "price": "120 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Pure white marble with tropical undertones, ideal for bright, open spaces",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Tropic+white+Marble.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 14,
-        "name": "White (K-6406) Marble",
-        "price": "120 - 180 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "Premium white marble with distinctive code, perfect for modern applications",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/White+(k-6406)+Marble.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "75+ years with proper maintenance",
-          "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
-          "maintenance": "Seal once a year, clean with granite-specific cleaner",
-          "availability": "In stock"
-        }
-      }
-    ]
-  },
-  "services": {
-    "hero": {
-      "title": "Why Choose",
-      "highlightedText": "MarbleCo",
-      "subtitle": "Experience unparalleled quality and service with our premium marble solutions"
+    {
+     "description": "Natural marble with unique veining, ideal for sophisticated spaces",
+     "id": 2,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Amazonia+real+Marble.jpeg",
+     "name": "Amazonia Real Marble",
+     "origin": "India",
+     "price": "120 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
     },
-    "features": [
-      {
-        "id": 1,
-        "title": "Premium Selection",
-        "description": "Curated collection of the finest marble from around the world, ensuring exceptional quality and unique patterns.",
-        "icon": "💎"
-      },
-      {
-        "id": 2,
-        "title": "Expert Craftsmanship",
-        "description": "Skilled artisans with decades of experience in marble cutting, polishing, and installation.",
-        "icon": "⚒️"
-      },
-      {
-        "id": 3,
-        "title": "Lifetime Warranty",
-        "description": "Our confidence in quality is backed by a comprehensive lifetime warranty on all installations.",
-        "icon": "🛡️"
-      }
-    ]
+    {
+     "description": "Classic marble with subtle patterns, perfect for traditional designs",
+     "id": 3,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Aravalli+onyx.jpeg",
+     "name": "Aravalli onyx Marble",
+     "origin": "India",
+     "price": "120 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Modern marble with dynamic patterns, perfect for contemporary spaces",
+     "id": 4,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Armanitwisty+Marble.jpeg",
+     "name": "Armanitwisty Marble",
+     "origin": "India",
+     "price": "120 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Premium marble with striking patterns, ideal for luxury projects",
+     "id": 5,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Arzentina+Crema.jpeg",
+     "name": "Arzentina Crema Marble",
+     "origin": "India",
+     "price": "120 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Sophisticated grey marble, perfect for modern interiors",
+     "id": 6,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Azzaro+Gris+marble.jpeg",
+     "name": "Azzaro Gris Marble",
+     "origin": "India",
+     "price": "120 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Warm-toned marble with natural elegance, ideal for classic designs",
+     "id": 7,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Beige+Brown+Marble.jpeg",
+     "name": "Beige Brown Marble",
+     "origin": "India",
+     "price": "120 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Crystal-like marble with unique patterns, perfect for luxury spaces",
+     "id": 8,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Cristol+sarvario+Marble.jpeg",
+     "name": "Cristol Sarvario Marble",
+     "origin": "India",
+     "price": "120 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Bold red marble with dramatic patterns, ideal for statement pieces",
+     "id": 9,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Dragon+Red+Marble.jpeg",
+     "name": "Dragon Red Marble",
+     "origin": "India",
+     "price": "120 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Sleek silver marble with onyx-like patterns, perfect for modern designs",
+     "id": 10,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Onexy+Silver+Marble.jpeg",
+     "name": "Onexy Silver Marble",
+     "origin": "India",
+     "price": "120 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Unique blue-toned marble with distinctive veining, ideal for luxury interiors",
+     "id": 11,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/SATVARIOLIPSA+BLUE+MARBLE.jpeg",
+     "name": "Satvariolipsa Blue Marble",
+     "origin": "India",
+     "price": "120 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Elegant silver marble with subtle patterns, perfect for sophisticated spaces",
+     "id": 12,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Tarra+silver+Marble.jpeg",
+     "name": "Tara Silver Marble",
+     "origin": "India",
+     "price": "120 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Pure white marble with tropical undertones, ideal for bright, open spaces",
+     "id": 13,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/Tropic+white+marble.jpeg",
+     "name": "Tropic White Marble",
+     "origin": "India",
+     "price": "120 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "Premium white marble with distinctive code, perfect for modern applications",
+     "id": 14,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/marble/White+k+6406.jpeg",
+     "name": "White (K-6406) Marble",
+     "origin": "India",
+     "price": "120 - 180 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Countertops, floors, exterior facades, and high-traffic commercial areas",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "75+ years with proper maintenance",
+      "maintenance": "Seal once a year, clean with granite-specific cleaner"
+     },
+     "type": "Premium"
+    }
+   ]
   },
   "products": {
-    "hero": {
-      "title": "Our Product Collections",
-      "subtitle": "Explore our premium natural stone and tile collections for your home or commercial projects."
+   "categories": [
+    {
+     "description": "Discover our exquisite selection of premium marble slabs and tiles, sourced from the finest quarries around the world.",
+     "id": 1,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/Marble.jpeg",
+     "link": "/marble",
+     "name": "Marble"
     },
-    "categories": [
-      {
-        "id": 1,
-        "name": "Marble",
-        "description": "Discover our exquisite selection of premium marble slabs and tiles, sourced from the finest quarries around the world.",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/Marble.jpeg",
-        "link": "/marble"
-      },
-      {
-        "id": 2,
-        "name": "Granite",
-        "description": "Explore our extensive selection of durable, natural granite stone for countertops, flooring, and outdoor applications.",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite.jpeg",
-        "link": "/granite"
-      },
-      {
-        "id": 3,
-        "name": "Tile",
-        "description": "Browse our curated selection of ceramic, porcelain, and natural stone tiles for floors, walls, and decorative accents.",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title.jpeg",
-        "link": "/tile"
-      }
-    ]
+    {
+     "description": "Explore our extensive selection of durable, natural granite stone for countertops, flooring, and outdoor applications.",
+     "id": 2,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/granite.jpeg",
+     "link": "/granite",
+     "name": "Granite"
+    },
+    {
+     "description": "Browse our curated selection of ceramic, porcelain, and natural stone tiles for floors, walls, and decorative accents.",
+     "id": 3,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title.jpeg",
+     "link": "/tile",
+     "name": "Tile"
+    }
+   ],
+   "hero": {
+    "subtitle": "Explore our premium natural stone and tile collections for your home or commercial projects.",
+    "title": "Our Product Collections"
+   }
+  },
+  "services": {
+   "features": [
+    {
+     "description": "Curated collection of the finest marble from around the world, ensuring exceptional quality and unique patterns.",
+     "icon": "💎",
+     "id": 1,
+     "title": "Premium Selection"
+    },
+    {
+     "description": "Skilled artisans with decades of experience in marble cutting, polishing, and installation.",
+     "icon": "⚒️",
+     "id": 2,
+     "title": "Expert Craftsmanship"
+    },
+    {
+     "description": "Our confidence in quality is backed by a comprehensive lifetime warranty on all installations.",
+     "icon": "🛡️",
+     "id": 3,
+     "title": "Lifetime Warranty"
+    }
+   ],
+   "hero": {
+    "highlightedText": "MarbleCo",
+    "subtitle": "Experience unparalleled quality and service with our premium marble solutions",
+    "title": "Why Choose"
+   }
   },
   "testimonials": {
-    "hero": {
-      "title": "Loved by",
-      "highlightedText": "Our Clients",
-      "subtitle": "Discover why our clients choose us for their luxury marble needs."
+   "hero": {
+    "highlightedText": "Our Clients",
+    "subtitle": "Discover why our clients choose us for their luxury marble needs.",
+    "title": "Loved by"
+   },
+   "reviews": [
+    {
+     "id": 1,
+     "image": "img1",
+     "name": "Sarah Johnson",
+     "profilePic": "img1",
+     "rating": 5,
+     "review": "Absolutely stunning marble quality! The veining patterns are exactly what I was looking for in my latest design project.",
+     "role": "Interior Designer"
     },
-    "stats": {
-      "rating": {
-        "value": "4.9/5",
-        "label": "Average Rating"
-      },
-      "clients": {
-        "value": "500+",
-        "label": "Happy Clients"
-      },
-      "satisfaction": {
-        "value": "100%",
-        "label": "Satisfaction"
-      }
+    {
+     "id": 2,
+     "image": "img2",
+     "name": "Michael Chen",
+     "profilePic": "img2",
+     "rating": 5,
+     "review": "The attention to detail in their marble selection is unmatched. A true game-changer for luxury spaces.",
+     "role": "Architect"
     },
-    "reviews": [
-      {
-        "id": 1,
-        "name": "Sarah Johnson",
-        "role": "Interior Designer",
-        "image": "img1",
-        "profilePic": "img1",
-        "review": "Absolutely stunning marble quality! The veining patterns are exactly what I was looking for in my latest design project.",
-        "rating": 5
-      },
-      {
-        "id": 2,
-        "name": "Michael Chen",
-        "role": "Architect",
-        "image": "img2",
-        "profilePic": "img2",
-        "review": "The attention to detail in their marble selection is unmatched. A true game-changer for luxury spaces.",
-        "rating": 5
-      },
-      {
-        "id": 3,
-        "name": "Emma Thompson",
-        "role": "Home Owner",
-        "image": "img3",
-        "profilePic": "img3",
-        "review": "Working with MarbleCo was a dream. They helped me choose the perfect marble for my kitchen renovation.",
-        "rating": 5
-      }
-    ]
+    {
+     "id": 3,
+     "image": "img3",
+     "name": "Emma Thompson",
+     "profilePic": "img3",
+     "rating": 5,
+     "review": "Working with MarbleCo was a dream. They helped me choose the perfect marble for my kitchen renovation.",
+     "role": "Home Owner"
+    }
+   ],
+   "stats": {
+    "clients": {
+     "label": "Happy Clients",
+     "value": "500+"
+    },
+    "rating": {
+     "label": "Average Rating",
+     "value": "4.9/5"
+    },
+    "satisfaction": {
+     "label": "Satisfaction",
+     "value": "100%"
+    }
+   }
   },
   "tile": {
-    "hero": {
-      "title": "Designer Tile Collection",
-      "subtitle": "Explore our curated selection of ceramic, porcelain, and specialty tiles from around the world."
+   "hero": {
+    "subtitle": "Explore our curated selection of ceramic, porcelain, and specialty tiles from around the world.",
+    "title": "Designer Tile Collection"
+   },
+   "products": [
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 1,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile1+.jpeg",
+     "name": "Tile 1",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
     },
-    "products": [
-      {
-        "id": 1,
-        "name": "Tile 1",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile1+.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 2,
-        "name": "Tile 2",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile2.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 3,
-        "name": "Tile 3",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile3.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 4,
-        "name": "Tile 4",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile4.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 5,
-        "name": "Tile 5",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile5.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 6,
-        "name": "Tile 6",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile6.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 7,
-        "name": "Tile 7",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile20.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 8,
-        "name": "Tile 8",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile8.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 9,
-        "name": "Tile 9",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile9.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 10,
-        "name": "Tile 10",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile10.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 11,
-        "name": "Tile 11",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile11.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 12,
-        "name": "Tile 12",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile12.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 13,
-        "name": "Tile 13",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile13.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 14,
-        "name": "Tile 14",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile20.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 15,
-        "name": "Tile 15",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile15.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 16,
-        "name": "Tile 16",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile16.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 17,
-        "name": "Tile 17",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile17.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 18,
-        "name": "Tile 18",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile18.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      },
-      {
-        "id": 19,
-        "name": "Tile 19",
-        "price": "40 - 75 ",
-        "rating": 4.9,
-        "reviews": 136,
-        "origin": "India",
-        "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
-        "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile19.jpeg",
-        "type": "Premium",
-        "specifications": {
-          "durability": "Very High",
-          "lifetime": "50+ years with proper maintenance",
-          "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
-          "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years",
-          "availability": "In stock"
-        }
-      }
-    ]
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 2,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile2.jpeg",
+     "name": "Tile 2",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 3,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile3.jpeg",
+     "name": "Tile 3",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 4,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile4.jpeg",
+     "name": "Tile 4",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 5,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile5.jpeg",
+     "name": "Tile 5",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 6,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile6.jpeg",
+     "name": "Tile 6",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 7,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile20.jpeg",
+     "name": "Tile 7",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 8,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile8.jpeg",
+     "name": "Tile 8",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 9,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile9.jpeg",
+     "name": "Tile 9",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 10,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile10.jpeg",
+     "name": "Tile 10",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 11,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile11.jpeg",
+     "name": "Tile 11",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 12,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile12.jpeg",
+     "name": "Tile 12",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 13,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile13.jpeg",
+     "name": "Tile 13",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 14,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile20.jpeg",
+     "name": "Tile 14",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 15,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile15.jpeg",
+     "name": "Tile 15",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 16,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile16.jpeg",
+     "name": "Tile 16",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 17,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile17.jpeg",
+     "name": "Tile 17",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 18,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile18.jpeg",
+     "name": "Tile 18",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    },
+    {
+     "description": "High-quality tile with a smooth finish, perfect for elegant flooring and wall design",
+     "id": 19,
+     "image": "https://institution-utils.s3.us-east-1.amazonaws.com/jaganju-marble-granite/title/Tile19.jpeg",
+     "name": "Tile 19",
+     "origin": "India",
+     "price": "40 - 75 ",
+     "rating": 4.9,
+     "reviews": 136,
+     "specifications": {
+      "applications": "Flooring, wall cladding, kitchen backsplash, and bathroom surfaces",
+      "availability": "In stock",
+      "durability": "Very High",
+      "lifetime": "50+ years with proper maintenance",
+      "maintenance": "Clean with mild detergent and water; sealing recommended every 2-3 years"
+     },
+     "type": "Premium"
+    }
+   ]
   },
   "whatsapp": {
-    "button": {
-      "text": "Chat with us",
-      "phoneNumber": "9437283071",
-      "message": "Hello! I'm interested in your marble and granite products."
-    },
-    "tooltip": {
-      "text": "Message us on WhatsApp"
-    }
-  },
-  "contact": {
-    "hero": {
-      "title": "Get in Touch",
-      "subtitle": "Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible."
-    },
-    "info": {
-      "email": "info@jaganjumarble.com",
-      "phone": "+91 94372 83071",
-      "address": "123 Marble Street, Industrial Area, Bhubaneswar, Odisha",
-      "hours": "Monday - Saturday: 9:00 AM - 6:00 PM"
-    },
-    "form": {
-      "namePlaceholder": "Your name",
-      "emailPlaceholder": "your@email.com",
-      "subjectPlaceholder": "Subject",
-      "messagePlaceholder": "Your message",
-      "submitButton": "Send Message",
-      "loadingText": "Sending...",
-      "successMessage": "Your message has been sent. We will get back to you as soon as possible.",
-      "errorMessage": "Something went wrong. Please try again."
-    }
+   "button": {
+    "message": "Hello! I'm interested in your marble and granite products.",
+    "phoneNumber": "9437283071",
+    "text": "Chat with us"
+   },
+   "tooltip": {
+    "text": "Message us on WhatsApp"
+   }
   }
-}
+ }
+ 
