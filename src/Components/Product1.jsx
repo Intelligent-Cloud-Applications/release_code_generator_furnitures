@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useData } from '../context/context';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const ProductPage = () => {
+const MarblePage = () => {
   const { data, loading, error } = useData();
   const [expandedProductId, setExpandedProductId] = useState(null);
   const [loadedImages, setLoadedImages] = useState({});
@@ -40,7 +40,7 @@ const ProductPage = () => {
     );
   }
 
-  const { marble } = data;
+  const { product1 } = data;
 
   const toggleDetails = (productId) => {
     setExpandedProductId(expandedProductId === productId ? null : productId);
@@ -62,16 +62,16 @@ const ProductPage = () => {
           className="mb-12 relative"
         >
           <h1 className="text-2xl md:text-4xl font-semibold text-gray-900 text-center mt-16 mb-2 tracking-wide">
-            {marble.hero.title}
+            {product1.hero.title}
           </h1>
           <p className="text-center text-gray-600 max-w-2xl mx-auto font-light">
-            {marble.hero.subtitle}
+            {product1.hero.subtitle}
           </p>
         </motion.div>
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {marble.products.map((product, index) => (
+          {product1.products.map((product, index) => (
             <motion.div
               key={product.id}
               initial={{ opacity: 0, y: 20 }}
@@ -100,7 +100,7 @@ const ProductPage = () => {
                   className="absolute w-full h-full backface-hidden flex flex-col rounded-xl overflow-hidden"
                   style={{ backfaceVisibility: 'hidden' }}
                 >
-                  {/* Image Container */}
+                  {/* Image Container with Loading State */}
                   <div className="h-56 sm:h-64 overflow-hidden relative">
                     {/* Skeleton Loader */}
                     <AnimatePresence>
@@ -166,7 +166,6 @@ const ProductPage = () => {
 
                   {/* Content */}
                   <div className="p-4 sm:p-6 flex flex-col flex-grow">
-                    {/* Title and Origin */}
                     <div className="flex justify-between items-start mb-2">
                       <h3 className="text-lg sm:text-xl font-semibold text-gray-900 line-clamp-2">
                         {product.name}
@@ -176,7 +175,6 @@ const ProductPage = () => {
                       </span>
                     </div>
 
-                    {/* Rating */}
                     <div className="flex items-center mb-3">
                       <div className="flex items-center">
                         {[...Array(5)].map((_, index) => (
@@ -199,18 +197,15 @@ const ProductPage = () => {
                       </span>
                     </div>
 
-                    {/* Description with fixed height for consistency */}
                     <p className="text-gray-600 text-xs sm:text-sm mb-4 line-clamp-3 flex-grow">
                       {product.description}
                     </p>
 
-                    {/* Price */}
                     <div className="bg-gray-100 rounded-lg p-3 mb-4 flex justify-center items-center">
                       <span className="text-xl sm:text-2xl font-bold text-gray-900">₹{product.price}</span>
                       <span className="text-xs sm:text-sm text-gray-500 ml-2">per sq ft</span>
                     </div>
 
-                    {/* View Details Button - Fixed position at bottom */}
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
@@ -230,20 +225,15 @@ const ProductPage = () => {
                     transform: 'rotateY(180deg)'
                   }}
                 >
-                  {/* Aesthetic black background with subtle gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-black to-gray-900"></div>
-
-                  {/* Subtle marble texture overlay with low opacity */}
                   <div
                     className="absolute inset-0 bg-cover bg-center opacity-20"
                     style={{
-                      backgroundImage: `url(${product.image})`
+                      backgroundImage: `url(₹{product.image})`
                     }}
                   ></div>
 
-                  {/* Details content with elegant typography */}
                   <div className="relative text-white p-5 sm:p-7 h-full flex flex-col">
-                    {/* Elegant header with subtle border */}
                     <div className="mb-6 pb-4 border-b border-gray-700 border-opacity-50">
                       <h3 className="text-xl sm:text-2xl font-light tracking-wider mb-1">{product.name}</h3>
                       <div className="flex justify-between items-center">
@@ -258,44 +248,25 @@ const ProductPage = () => {
                       </div>
                     </div>
 
-                    {/* Product details with elegant styling and enhanced scrollbar */}
-                    <div className="space-y-5 flex-grow overflow-y-auto pr-1 custom-scrollbar scroll-reveal">
-                      {/* Specifications section */}
+                    <div className="space-y-5 flex-grow overflow-y-auto pr-1 custom-scrollbar">
                       <div className="mb-5">
                         <h4 className="font-light text-base sm:text-lg tracking-wider border-l-2 border-gray-500 pl-3 mb-4">
                           Product Specifications
                         </h4>
 
                         <div className="grid grid-cols-1 gap-4 text-sm">
-                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
-                            <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Durability</span>
-                            <span className="text-white font-light tracking-wide">{product.specifications.durability}</span>
-                          </div>
-
-                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
-                            <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Expected Lifetime</span>
-                            <span className="text-white font-light tracking-wide">{product.specifications.lifetime}</span>
-                          </div>
-
-                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
-                            <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Applications</span>
-                            <span className="text-white font-light tracking-wide">{product.specifications.applications}</span>
-                          </div>
-
-                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
-                            <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Maintenance</span>
-                            <span className="text-white font-light tracking-wide">{product.specifications.maintenance}</span>
-                          </div>
-
-                          <div className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm border border-gray-800 hover:border-gray-600 transition-colors duration-300">
-                            <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">Availability</span>
-                            <span className="text-white font-light tracking-wide">{product.specifications.availability}</span>
-                          </div>
+                          {Object.entries(product.specifications).map(([key, value]) => (
+                            <div key={key} className="flex flex-col bg-black bg-opacity-40 p-3 rounded-lg backdrop-blur-sm">
+                              <span className="text-gray-400 font-light uppercase text-xs tracking-wider mb-1">
+                                {key.charAt(0).toUpperCase() + key.slice(1)}
+                              </span>
+                              <span className="text-white font-light tracking-wide">{value}</span>
+                            </div>
+                          ))}
                         </div>
                       </div>
                     </div>
 
-                    {/* Back to Product Button - Updated with aesthetic color */}
                     <div className="mt-5">
                       <motion.button
                         whileHover={{ scale: 1.02 }}
@@ -317,7 +288,6 @@ const ProductPage = () => {
       {/* Custom scrollbar styles */}
       <style>
         {`
-          /* Custom Scrollbar for Product Cards */
           .custom-scrollbar::-webkit-scrollbar {
             width: 4px;
           }
@@ -336,26 +306,10 @@ const ProductPage = () => {
           .custom-scrollbar::-webkit-scrollbar-thumb:hover {
             background: rgba(255, 255, 255, 0.5);
           }
-
-          /* Add the scroll reveal animation */
-          .scroll-reveal {
-            animation: fadeIn 0.5s ease-in-out;
-          }
-
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-              transform: translateY(10px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
         `}
       </style>
     </motion.div>
   );
 };
 
-export default ProductPage;
+export default MarblePage;

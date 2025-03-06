@@ -1,16 +1,7 @@
 import { useData } from "../context/context";
 import { motion, AnimatePresence } from "framer-motion";
-import img1 from "../assets/Replacetestimonials1.jpeg";
-import img2 from "../assets/testimonial2.jpg";
-import img3 from "../assets/testimonial 3.jpg";
 
 const TestimonialCard = ({ testimonial, index, variants }) => {
-  const imageMap = {
-    img1,
-    img2,
-    img3
-  };
-
   return (
     <motion.div
       variants={variants}
@@ -25,8 +16,8 @@ const TestimonialCard = ({ testimonial, index, variants }) => {
           {/* Customer Image */}
           <div className="h-48 sm:h-64 overflow-hidden">
             <motion.img
-              src={imageMap[testimonial.image]}
-              alt={testimonial.name}
+              src={testimonial?.image || '/default-image.jpg'}
+              alt={testimonial?.name || 'Customer'}
               className="w-full h-full object-cover"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.5 }}
@@ -49,7 +40,7 @@ const TestimonialCard = ({ testimonial, index, variants }) => {
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.3 + i * 0.1 }}
                   className={`w-4 h-4 ${
-                    i < testimonial.rating ? "text-yellow-400" : "text-gray-300"
+                    i < (testimonial?.rating || 0) ? "text-yellow-400" : "text-gray-300"
                   }`}
                   fill="currentColor"
                   viewBox="0 0 20 20"
@@ -66,7 +57,7 @@ const TestimonialCard = ({ testimonial, index, variants }) => {
               transition={{ delay: 0.4 }}
               className="text-gray-600 text-sm leading-relaxed mb-4"
             >
-              "{testimonial.review}"
+              "{testimonial?.review || 'No review available'}"
             </motion.p>
 
             {/* Profile */}
@@ -79,14 +70,14 @@ const TestimonialCard = ({ testimonial, index, variants }) => {
               <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-purple-500/20">
                 <motion.img
                   whileHover={{ scale: 1.1 }}
-                  src={imageMap[testimonial.profilePic]}
-                  alt={testimonial.name}
+                  src={testimonial?.profilePic || '/default-profile.jpg'}
+                  alt={testimonial?.name || 'Customer'}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div>
-                <h4 className="font-medium text-gray-900">{testimonial.name}</h4>
-                <p className="text-sm text-gray-500">{testimonial.role}</p>
+                <h4 className="font-medium text-gray-900">{testimonial?.name || 'Anonymous'}</h4>
+                <p className="text-sm text-gray-500">{testimonial?.role || 'Customer'}</p>
               </div>
             </motion.div>
           </div>

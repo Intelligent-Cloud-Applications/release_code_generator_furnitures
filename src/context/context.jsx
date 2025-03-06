@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { API } from 'aws-amplify';
 import initialData from '../../utils/data.json';
 import '../aws-config';
@@ -205,16 +205,16 @@ export const DataProvider = ({ children, onError }) => {
   const [error, setError] = useState(null);
   const [sectionErrors, setSectionErrors] = useState({});
 
-  const validateData = (data) => {
+  const validateData = useCallback((data) => {
     const errors = {};
     Object.keys(defaultData).forEach(section => {
       errors[section] = !isValidSection(data[section], section);
     });
     setSectionErrors(errors);
     return errors;
-  };
+  }, []);
 
-  const checkSectionAndNavigate = (sectionName) => {
+  const checkSectionAndNavigate = useCallback((sectionName) => {
     if (!contextData[sectionName] || sectionErrors[sectionName]) {
       if (onError) {
         onError({
@@ -225,9 +225,11 @@ export const DataProvider = ({ children, onError }) => {
       return false;
     }
     return true;
-  };
+  }, [contextData, sectionErrors, onError]);
 
   useEffect(() => {
+    let isMounted = true;
+
     const fetchData = async () => {
       try {
         setLoading(true);
@@ -235,12 +237,12 @@ export const DataProvider = ({ children, onError }) => {
         setSectionErrors({});
         
         if (localData) {
-          // console.log('Using local data');
           await new Promise(resolve => setTimeout(resolve, 100));
-          setContextData(initialData);
-          validateData(initialData);
+          if (isMounted) {
+            setContextData(initialData);
+            validateData(initialData);
+          }
         } else {
-          // console.log('Fetching from API');
           const response = await API.get('main', 
             `/any/get-institution-data/${initialData.institutionid}`
           );
@@ -269,30 +271,39 @@ export const DataProvider = ({ children, onError }) => {
             }
           };
           
-          // console.log('API Data processed:', newData);
-          setContextData(newData);
-          validateData(newData);
+          if (isMounted) {
+            setContextData(newData);
+            validateData(newData);
+          }
         }
       } catch (err) {
         console.error('Error initializing data:', err);
-        setError(err);
-        const fallbackData = localData ? initialData : defaultData;
-        setContextData(fallbackData);
-        validateData(fallbackData);
-        if (onError) {
-          onError({
-            message: 'Failed to load data',
-            code: 500,
-            error: err.message
-          });
+        if (isMounted) {
+          setError(err);
+          const fallbackData = localData ? initialData : defaultData;
+          setContextData(fallbackData);
+          validateData(fallbackData);
+          if (onError) {
+            onError({
+              message: 'Failed to load data',
+              code: 500,
+              error: err.message
+            });
+          }
         }
       } finally {
-        setLoading(false);
+        if (isMounted) {
+          setLoading(false);
+        }
       }
     };
 
     fetchData();
-  }, [onError]);
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   return (
     <DataContext.Provider value={{ 

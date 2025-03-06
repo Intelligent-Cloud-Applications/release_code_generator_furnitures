@@ -1,14 +1,46 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useData } from "../context/context";
+
+const NavbarSkeleton = () => {
+  return (
+    <div className="relative">
+      <nav className="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
+        <div className="max-w-screen-7xl mx-auto">
+          <div className="flex items-center justify-between h-16 px-6 lg:px-12">
+            {/* Logo Skeleton */}
+            <div className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-gray-200 rounded-lg animate-pulse" />
+              <div className="h-8 w-32 bg-gray-200 rounded animate-pulse" />
+            </div>
+
+            {/* Navigation Items Skeleton */}
+            <div className="hidden lg:flex items-center space-x-10">
+              {[1, 2, 3, 4].map((item) => (
+                <div key={item} className="h-6 w-20 bg-gray-200 rounded animate-pulse" />
+              ))}
+            </div>
+
+            {/* Mobile Menu Button Skeleton */}
+            <div className="lg:hidden">
+              <div className="w-7 h-7 bg-gray-200 rounded-lg animate-pulse" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
+};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Products", path: "/Products" },
-    { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" }
-  ];
+  const { data, loading } = useData();
+
+  if (loading) {
+    return <NavbarSkeleton />;
+  }
+
+  const { logo, navigation } = data || {};
 
   return (
     <div className="relative">
@@ -18,17 +50,17 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16 px-6 lg:px-12">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">J</span>
+              <div className={`w-10 h-10 bg-gradient-to-r ${logo?.gradient?.from} ${logo?.gradient?.to} rounded-lg flex items-center justify-center`}>
+                <span className="text-white font-bold text-xl">{logo?.firstLetter}</span>
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                JaganJu
+              <span className={`text-2xl font-bold bg-gradient-to-r ${logo?.gradient?.from} ${logo?.gradient?.to} bg-clip-text text-transparent`}>
+                {logo?.text}
               </span>
             </div>
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center space-x-10">
-              {navItems.map((item) => (
+              {navigation?.items?.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
@@ -47,6 +79,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-3 rounded-lg hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+              aria-label="Toggle menu"
             >
               <div className="w-7 h-7 flex flex-col justify-center space-y-2">
                 <span
@@ -75,7 +108,7 @@ const Navbar = () => {
             } overflow-hidden`}
           >
             <div className="px-6 py-4 space-y-2 bg-gray-50">
-              {navItems.map((item) => (
+              {navigation?.items?.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}

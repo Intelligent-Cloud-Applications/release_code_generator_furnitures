@@ -2,10 +2,7 @@ import { useState } from 'react';
 import { useData } from '../context/context';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Import custom scrollbar styles
-import './scrollbar.css';
-
-const TileProductPage = () => {
+const TilePage = () => {
   const { data, loading, error } = useData();
   const [expandedProductId, setExpandedProductId] = useState(null);
   const [loadedImages, setLoadedImages] = useState({});
@@ -43,7 +40,7 @@ const TileProductPage = () => {
     );
   }
 
-  const { tile } = data;
+  const { product2 } = data;
 
   const toggleDetails = (productId) => {
     setExpandedProductId(expandedProductId === productId ? null : productId);
@@ -65,16 +62,16 @@ const TileProductPage = () => {
           className="mb-12 relative"
         >
           <h1 className="text-2xl md:text-4xl font-semibold text-gray-900 text-center mt-16 mb-2 tracking-wide">
-            {tile.hero.title}
+            {product2.hero.title}
           </h1>
           <p className="text-center text-gray-600 max-w-2xl mx-auto font-light">
-            {tile.hero.subtitle}
+            {product2.hero.subtitle}
           </p>
         </motion.div>
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {tile.products.map((product, index) => (
+          {product2.products.map((product, index) => (
             <motion.div
               key={product.id}
               initial={{ opacity: 0, y: 20 }}
@@ -103,7 +100,7 @@ const TileProductPage = () => {
                   className="absolute w-full h-full backface-hidden flex flex-col rounded-xl overflow-hidden"
                   style={{ backfaceVisibility: 'hidden' }}
                 >
-                  {/* Image Container with Loading State */}
+                  {/* Image Container */}
                   <div className="h-56 sm:h-64 overflow-hidden relative">
                     {/* Skeleton Loader */}
                     <AnimatePresence>
@@ -157,12 +154,11 @@ const TileProductPage = () => {
                       loading="lazy"
                       onLoad={() => handleImageLoad(product.id)}
                     />
-                    
                     <motion.span 
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.2 }}
-                      className="absolute top-4 left-4 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-medium z-10"
+                      className="absolute top-4 left-4 bg-gray-900 text-white px-3 py-1 rounded-full text-sm font-medium"
                     >
                       {product.type}
                     </motion.span>
@@ -237,11 +233,11 @@ const TileProductPage = () => {
                   {/* Aesthetic black background with subtle gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-black to-gray-900"></div>
 
-                  {/* Subtle tile texture overlay with low opacity */}
+                  {/* Subtle marble texture overlay with low opacity */}
                   <div
                     className="absolute inset-0 bg-cover bg-center opacity-20"
                     style={{
-                      backgroundImage: `url(₹{product.image})`
+                      backgroundImage: `url(${product.image})`
                     }}
                   ></div>
 
@@ -321,6 +317,7 @@ const TileProductPage = () => {
       {/* Custom scrollbar styles */}
       <style>
         {`
+          /* Custom Scrollbar for Product Cards */
           .custom-scrollbar::-webkit-scrollbar {
             width: 4px;
           }
@@ -339,10 +336,26 @@ const TileProductPage = () => {
           .custom-scrollbar::-webkit-scrollbar-thumb:hover {
             background: rgba(255, 255, 255, 0.5);
           }
+
+          /* Add the scroll reveal animation */
+          .scroll-reveal {
+            animation: fadeIn 0.5s ease-in-out;
+          }
+
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+              transform: translateY(10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
         `}
       </style>
     </motion.div>
   );
 };
 
-export default TileProductPage;
+export default TilePage;
