@@ -1,8 +1,23 @@
 {
-  "institutionid": "maha2345",
+  "institutionid": "behe2423",
   "index": "0",
+  "metadata": {
+    "title": "Behera Jewelers - Luxury Jewelry Store",
+    "description": "Premium jewelry store offering gold, silver, platinum, and diamond collections. Custom designs and expert craftsmanship.",
+    "keywords": "jewelry, gold jewelry, diamond jewelry, silver jewelry, custom jewelry, luxury jewelry, Behera Jewelers",
+    "author": "Behera Jewelers",
+    "ogTitle": "Behera Jewelers - Luxury Jewelry Store",
+    "ogDescription": "Premium jewelry store offering gold, silver, platinum, and diamond collections. Custom designs and expert craftsmanship.",
+    "ogImage": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?w=1200&auto=format&fit=crop&q=60",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "Behera Jewelers - Luxury Jewelry Store",
+    "twitterDescription": "Premium jewelry store offering gold, silver, platinum, and diamond collections. Custom designs and expert craftsmanship.",
+    "twitterImage": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?w=1200&auto=format&fit=crop&q=60",
+    "favicon": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?w=1200&auto=format&fit=crop&q=60",
+    "themeColor": "#3B82F6"
+  },
   "logo": {
-    "text": "Mahadev Furniture",
+    "text": "Behera Jewelers",
     "firstLetter": "M",
     "gradient": {
       "from": "from-blue-500",
@@ -13,23 +28,19 @@
     "items": [
       {
         "name": "Home",
-        "path": "/",
-        "icon": "Home"
+        "path": "/"
       },
       {
-        "name": "Products",
-        "path": "/Products",
-        "icon": "Grid"
+        "name": "Collections",
+        "path": "/products"
       },
       {
         "name": "About",
-        "path": "/about",
-        "icon": "Info"
+        "path": "/about"
       },
       {
         "name": "Contact",
-        "path": "/contact",
-        "icon": "Phone"
+        "path": "/contact"
       }
     ]
   },
@@ -37,29 +48,29 @@
    "benefits": {
     "items": [
      {
-      "description": "Premium quality materials and expert craftsmanship",
+      "description": "Premium quality precious metals and gemstones",
       "icon": "Gem",
-      "title": "Quality Furniture"
+      "title": "Quality Jewelry"
      },
      {
-      "description": "Custom designs tailored to your space",
+      "description": "Custom designs for your special occasions",
       "icon": "Settings",
       "title": "Custom Design"
      },
      {
-      "description": "Skilled artisans with years of experience",
+      "description": "Expert jewelers with decades of experience",
       "icon": "CheckCircle",
       "title": "Expert Craftsmanship"
      },
      {
-      "description": "Dedicated support throughout your project",
+      "description": "Personalized service for every customer",
       "icon": "Heart",
       "title": "Customer Service"
      },
      {
-      "description": "On-time delivery and installation",
+      "description": "Secure delivery and insurance",
       "icon": "Clock",
-      "title": "Timely Delivery"
+      "title": "Safe Delivery"
      }
     ],
     "title": "Why Choose Us?"
@@ -72,15 +83,15 @@
     "title": "About Us"
    },
    "mission": {
-    "content": "Our mission is to provide high-quality, stylish, and durable furniture that enhances the beauty and functionality of your living spaces. We combine traditional craftsmanship with modern design to create pieces that last a lifetime.",
+    "content": "Our mission is to provide exquisite, high-quality jewelry that celebrates life's precious moments. We combine traditional craftsmanship with contemporary design to create timeless pieces that become family heirlooms.",
     "title": "Our Mission"
    },
    "story": {
-    "content": "Welcome to Mahadev Furniture, where quality meets style. With years of experience in the furniture industry, we specialize in creating beautiful, functional pieces for homes and businesses.",
+    "content": "Welcome to Behera Jewelers, where elegance meets excellence. With years of experience in the jewelry industry, we specialize in creating beautiful, meaningful pieces that capture your special moments.",
     "title": "Our Story"
    }
   },
-  "companyName": "Mahadev Furniture",
+  "companyName": "Behera Jewelers",
   "contact": {
    "form": {
     "emailPlaceholder": "your@email.com",
@@ -93,12 +104,12 @@
     "successMessage": "Your message has been sent. We will get back to you as soon as possible."
    },
    "hero": {
-    "subtitle": "Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "subtitle": "Have questions about our jewelry? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
     "title": "Get in Touch"
    },
    "info": {
     "address": "Junagarh Road, Bhawanipatna, Kalahandi -766002",
-    "email": "mahadev@furniture.com",
+    "email": "Behera@jewelers.com",
     "hours": "Monday - Saturday: 9:00 AM - 6:00 PM",
     "phone": "+91 94372 83071"
    }
@@ -109,34 +120,34 @@
     "text": "Still have questions?"
    },
    "hero": {
-    "subtitle": "Find answers to common questions about our furniture products and services",
+    "subtitle": "Find answers to common questions about our jewelry products and services",
     "title": "Frequently Asked Questions"
    },
    "items": [
     {
-     "answer": "We offer a wide range of furniture including living room sets, bedroom furniture, dining sets, office furniture, and custom pieces. Our collection features various styles from traditional to modern.",
-     "question": "What types of furniture do you offer?"
+     "answer": "We offer a wide range of jewelry including gold, silver, platinum, diamonds, precious stones, and custom designs. Our collection features various styles from traditional to modern.",
+     "question": "What types of jewelry do you offer?"
     },
     {
-     "answer": "You can request a quote through our website by providing details about the type of furniture, dimensions, and any specific requirements you have.",
-     "question": "How can I get a price quote for furniture?"
+     "answer": "You can request a quote through our website by providing details about the type of jewelry, metal preference, stones, and any specific requirements you have.",
+     "question": "How can I get a price quote for jewelry?"
     },
     {
-     "answer": "We offer both standard and custom furniture options. Standard pieces are ready-made and available for immediate delivery, while custom pieces are made to order based on your specifications.",
-     "question": "Do you offer custom furniture?"
+     "answer": "Yes, we offer both ready-made and custom jewelry options. Our expert artisans can create unique pieces based on your design preferences and requirements.",
+     "question": "Do you offer custom jewelry designs?"
     }
    ]
   },
   "footer": {
    "contact": {
-    "companyName": "Mahadev Furniture",
-    "description": "Deals in: Living Room, Bedroom, Dining Room, Office Furniture",
+    "companyName": "Behera Jewelers",
+    "description": "Deals in: Gold, Silver, Platinum, Diamonds, Precious Stones",
     "location": "Location - Near Satsang Mandir, Junagard Road",
     "phone": "9437283071",
     "title": "Contact"
    },
    "copyright": {
-    "text": "Mahadev Furniture. All rights reserved."
+    "text": "Behera Jewelers. All rights reserved."
    },
    "quickLinks": {
     "items": [
@@ -146,11 +157,11 @@
      },
      {
       "href": "#",
-      "name": "Custom Projects"
+      "name": "Custom Designs"
      },
      {
       "href": "#",
-      "name": "Delivery Services"
+      "name": "Insurance Services"
      },
      {
       "href": "#",
@@ -181,108 +192,108 @@
   "hero": {
    "button": {
     "text": "Explore Now",
-    "url": "/products"
+    "url": "/collections"
    },
    "settings": {
     "slideInterval": 5000
    },
    "slides": [
     {
-     "description": "Discover our premium collection of furniture for your dream home",
-     "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&auto=format&fit=crop&q=60",
-     "subtitle": "Quality Furniture",
-     "title": "Welcome to Mahadev Furniture"
+     "description": "Discover our premium collection of jewelry for your special moments",
+     "image": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?w=1600&auto=format&fit=crop&q=60",
+     "subtitle": "Luxury Jewelry",
+     "title": "Welcome to Behera Jewelers"
     },
     {
-     "description": "Elegant designs for modern living",
-     "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1600&auto=format&fit=crop&q=60",
+     "description": "Elegant designs for modern times",
+     "image": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=1600&auto=format&fit=crop&q=60",
      "subtitle": "Modern Collection",
      "title": "Contemporary Designs"
     },
     {
-     "description": "Custom furniture for your unique space",
-     "image": "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=1600&auto=format&fit=crop&q=60",
+     "description": "Custom jewelry for your unique style",
+     "image": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=1600&auto=format&fit=crop&q=60",
      "subtitle": "Custom Design",
      "title": "Tailored Solutions"
     }
    ]
   },
-  "institutionType": "Furniture Store",
+  "institutionType": "Jewelry Store",
   "products": {
    "categories": [
     {
-     "description": "Premium living room furniture collection",
+     "description": "Premium gold jewelry collection",
      "id": 1,
-     "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&auto=format&fit=crop&q=60",
-     "link": "/living-room",
-     "name": "Living Room",
-     "path": "living-room"
+     "image": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?w=800&auto=format&fit=crop&q=60",
+     "link": "/gold",
+     "name": "Gold",
+     "path": "gold"
     },
     {
-     "description": "Elegant bedroom furniture collection",
+     "description": "Elegant diamond jewelry collection",
      "id": 2,
-     "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&auto=format&fit=crop&q=60",
-     "link": "/bedroom",
-     "name": "Bedroom",
-     "path": "bedroom"
+     "image": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800&auto=format&fit=crop&q=60",
+     "link": "/diamonds",
+     "name": "Diamonds",
+     "path": "diamonds"
     },
     {
-     "description": "Beautiful dining room furniture collection",
+     "description": "Beautiful silver jewelry collection",
      "id": 3,
-     "image": "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&auto=format&fit=crop&q=60",
-     "link": "/dining-room",
-     "name": "Dining Room",
-     "path": "dining-room"
+     "image": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800&auto=format&fit=crop&q=60",
+     "link": "/silver",
+     "name": "Silver",
+     "path": "silver"
     }
    ],
    "hero": {
-    "subtitle": "Explore our premium collections for your home",
+    "subtitle": "Explore our premium collections for your special moments",
     "title": "Our Collections"
    }
   },
   "product1": {
    "hero": {
-    "subtitle": "Create your perfect living space",
-    "title": "Living Room Collection"
+    "subtitle": "Create your perfect gold collection",
+    "title": "Gold Collection"
    },
    "products": [
     {
      "id": 1,
-     "name": "Modern Sofa Set",
-     "description": "Contemporary 3-piece sofa set with elegant design",
-     "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&auto=format&fit=crop&q=60",
-     "price": "45,000",
-     "type": "Sofa",
+     "name": "Gold Necklace Set",
+     "description": "Traditional gold necklace set with matching earrings",
+     "image": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?w=800&auto=format&fit=crop&q=60",
+     "price": "2,50,000",
+     "type": "Necklace",
      "origin": "India",
      "rating": 4.8,
      "reviews": 45,
      "specifications": {
-      "material": "Premium fabric",
-      "color": "Grey",
-      "dimensions": "L: 84\" x W: 36\" x H: 34\"",
-      "warranty": "5 years",
-      "delivery": "Free delivery and assembly",
-      "maintenance": "Regular cleaning with fabric cleaner",
+      "material": "22K Gold",
+      "weight": "45 grams",
+      "purity": "91.6%",
+      "warranty": "Lifetime",
+      "delivery": "Secure delivery with insurance",
+      "maintenance": "Regular cleaning and polishing",
       "availability": "In stock"
      }
     },
     {
      "id": 2,
-     "name": "TV Unit",
-     "description": "Stylish TV unit with storage space",
-     "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&auto=format&fit=crop&q=60",
-     "price": "25,000",
-     "type": "Storage",
+     "name": "Gold Bangles",
+     "description": "Traditional gold bangles with intricate design",
+     "image": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800&auto=format&fit=crop&q=60",
+     "price": "1,20,000",
+     "type": "Bangles",
      "origin": "India",
      "rating": 4.7,
      "reviews": 38,
      "specifications": {
-      "material": "Engineered wood",
-      "color": "Walnut",
-      "dimensions": "L: 60\" x W: 18\" x H: 24\"",
-      "warranty": "3 years",
-      "delivery": "Free delivery and assembly",
-      "maintenance": "Regular dusting and cleaning",
+      "material": "22K Gold",
+      "weight": "25 grams",
+      "purity": "91.6%",
+      "warranty": "Lifetime",
+      "delivery": "Secure delivery with insurance",
+      "maintenance": "Regular cleaning and polishing",
       "availability": "In stock"
      }
     }
@@ -290,47 +301,49 @@
   },
   "product2": {
    "hero": {
-    "subtitle": "Design your dream bedroom",
-    "title": "Bedroom Collection"
+    "subtitle": "Design your dream diamond collection",
+    "title": "Diamond Collection"
    },
    "products": [
     {
      "id": 1,
-     "name": "Queen Size Bed",
-     "description": "Elegant queen size bed with headboard",
-     "image": "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&auto=format&fit=crop&q=60",
-     "price": "35,000",
-     "type": "Bed",
+     "name": "Diamond Ring",
+     "description": "Solitaire diamond ring with 18K gold setting",
+     "image": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800&auto=format&fit=crop&q=60",
+     "price": "1,50,000",
+     "type": "Ring",
      "origin": "India",
      "rating": 4.6,
      "reviews": 42,
      "specifications": {
-      "material": "Solid wood",
-      "color": "Dark oak",
-      "dimensions": "L: 64\" x W: 80\" x H: 48\"",
-      "warranty": "5 years",
-      "delivery": "Free delivery and assembly",
-      "maintenance": "Regular cleaning and polishing",
+      "material": "18K Gold with Diamond",
+      "diamond": "1 carat",
+      "clarity": "VS1",
+      "color": "D",
+      "warranty": "Lifetime",
+      "delivery": "Secure delivery with insurance",
+      "maintenance": "Regular cleaning and inspection",
       "availability": "In stock"
      }
     },
     {
      "id": 2,
-     "name": "Wardrobe",
-     "description": "Spacious wardrobe with sliding doors",
-     "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&auto=format&fit=crop&q=60",
-     "price": "40,000",
-     "type": "Storage",
+     "name": "Diamond Pendant",
+     "description": "Elegant diamond pendant with chain",
+     "image": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?w=800&auto=format&fit=crop&q=60",
+     "price": "85,000",
+     "type": "Pendant",
      "origin": "India",
      "rating": 4.8,
      "reviews": 35,
      "specifications": {
-      "material": "Engineered wood",
-      "color": "White",
-      "dimensions": "L: 72\" x W: 24\" x H: 84\"",
-      "warranty": "5 years",
-      "delivery": "Free delivery and assembly",
-      "maintenance": "Regular cleaning and dusting",
+      "material": "18K Gold with Diamond",
+      "diamond": "0.5 carat",
+      "clarity": "VS2",
+      "color": "E",
+      "warranty": "Lifetime",
+      "delivery": "Secure delivery with insurance",
+      "maintenance": "Regular cleaning and inspection",
       "availability": "In stock"
      }
     }
@@ -338,47 +351,47 @@
   },
   "product3": {
    "hero": {
-    "subtitle": "Elegant dining solutions",
-    "title": "Dining Room Collection"
+    "subtitle": "Elegant silver solutions",
+    "title": "Silver Collection"
    },
    "products": [
     {
      "id": 1,
-     "name": "Dining Table Set",
-     "description": "6-seater dining table with chairs",
-     "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&auto=format&fit=crop&q=60",
-     "price": "30,000",
-     "type": "Dining",
+     "name": "Silver Necklace Set",
+     "description": "Contemporary silver necklace with matching earrings",
+     "image": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800&auto=format&fit=crop&q=60",
+     "price": "15,000",
+     "type": "Necklace",
      "origin": "India",
      "rating": 4.9,
      "reviews": 48,
      "specifications": {
-      "material": "Solid wood",
-      "color": "Teak",
-      "dimensions": "Table: L: 60\" x W: 36\" x H: 30\"",
+      "material": "925 Silver",
+      "weight": "35 grams",
+      "purity": "92.5%",
       "warranty": "5 years",
-      "delivery": "Free delivery and assembly",
+      "delivery": "Secure delivery with insurance",
       "maintenance": "Regular cleaning and polishing",
       "availability": "In stock"
      }
     },
     {
      "id": 2,
-     "name": "Sideboard",
-     "description": "Elegant sideboard with storage",
-     "image": "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&auto=format&fit=crop&q=60",
-     "price": "28,000",
-     "type": "Storage",
+     "name": "Silver Bracelet",
+     "description": "Modern silver bracelet with stones",
+     "image": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?w=800&auto=format&fit=crop&q=60",
+     "price": "8,000",
+     "type": "Bracelet",
      "origin": "India",
      "rating": 4.7,
      "reviews": 40,
      "specifications": {
-      "material": "Engineered wood",
-      "color": "Walnut",
-      "dimensions": "L: 48\" x W: 18\" x H: 36\"",
-      "warranty": "3 years",
-      "delivery": "Free delivery and assembly",
-      "maintenance": "Regular cleaning and dusting",
+      "material": "925 Silver",
+      "weight": "20 grams",
+      "purity": "92.5%",
+      "warranty": "5 years",
+      "delivery": "Secure delivery with insurance",
+      "maintenance": "Regular cleaning and polishing",
       "availability": "In stock"
      }
     }
@@ -387,34 +400,34 @@
   "services": {
    "features": [
     {
-     "description": "Custom furniture designs tailored to your space and preferences",
+     "description": "Custom jewelry designs tailored to your preferences",
      "icon": "🎨",
      "id": 1,
      "title": "Custom Design"
     },
     {
-     "description": "Professional delivery and assembly services",
+     "description": "Secure delivery and insurance services",
      "icon": "🚚",
      "id": 2,
-     "title": "Delivery & Assembly"
+     "title": "Delivery & Insurance"
     },
     {
-     "description": "Extended warranty on all furniture pieces",
+     "description": "Extended warranty on all jewelry pieces",
      "icon": "✨",
      "id": 3,
      "title": "Warranty"
     }
    ],
    "hero": {
-    "highlightedText": "Mahadev Furniture",
-    "subtitle": "Experience quality furniture and exceptional service",
+    "highlightedText": "Behera Jewelers",
+    "subtitle": "Experience luxury jewelry and exceptional service",
     "title": "Why Choose"
    }
   },
   "testimonials": {
    "hero": {
     "highlightedText": "Our Clients",
-    "subtitle": "See what our customers say about our furniture and service",
+    "subtitle": "See what our customers say about our jewelry and service",
     "title": "Loved by"
    },
    "reviews": [
@@ -424,8 +437,8 @@
      "image": "https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=500&auto=format&fit=crop&q=60",
      "profilePic": "https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=150&auto=format&fit=crop&q=60",
      "rating": 5,
-     "review": "The quality of furniture from Mahadev Furniture is exceptional. Their custom dining set perfectly fits our space and the craftsmanship is remarkable. The team was professional throughout the entire process.",
-     "role": "Home Owner"
+     "review": "The quality of jewelry from Behera Jewelers is exceptional. Their custom wedding set perfectly matched our expectations and the craftsmanship is remarkable. The team was professional throughout the entire process.",
+     "role": "Customer"
     },
     {
      "id": 2,
@@ -433,8 +446,8 @@
      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60",
      "profilePic": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=60",
      "rating": 5,
-     "review": "As an interior designer, I've worked with many furniture suppliers, but Mahadev Furniture stands out. Their attention to detail and commitment to quality is unmatched. My clients are always delighted with their pieces.",
-     "role": "Interior Designer"
+     "review": "As a jewelry designer, I've worked with many suppliers, but Behera Jewelers stands out. Their attention to detail and commitment to quality is unmatched. My clients are always delighted with their pieces.",
+     "role": "Jewelry Designer"
     },
     {
      "id": 3,
@@ -442,8 +455,8 @@
      "image": "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=500&auto=format&fit=crop&q=60",
      "profilePic": "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=150&auto=format&fit=crop&q=60",
      "rating": 5,
-     "review": "We needed office furniture for our new startup, and Mahadev Furniture delivered beyond expectations. The ergonomic chairs and custom desks have made our workspace both functional and beautiful.",
-     "role": "Business Owner"
+     "review": "We needed custom jewelry for our family occasion, and Behera Jewelers delivered beyond expectations. The quality of gold and diamonds, along with their expert craftsmanship, made our special day even more memorable.",
+     "role": "Customer"
     }
    ],
    "stats": {
@@ -463,7 +476,7 @@
   },
   "whatsapp": {
    "button": {
-    "message": "Hello! I'm interested in your furniture products.",
+    "message": "Hello! I'm interested in your jewelry products.",
     "phoneNumber": "9437283071",
     "text": "Chat with us"
    },
@@ -471,4 +484,4 @@
     "text": "Message us on WhatsApp"
    }
   }
- }
+}

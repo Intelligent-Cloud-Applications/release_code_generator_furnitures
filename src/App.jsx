@@ -16,6 +16,7 @@ import { DataProvider } from './context/context';
 import { Toaster } from 'react-hot-toast';
 import ErrorPage from './Components/ErrorPage';
 import { useData } from './context/context';
+import DocumentHead from './components/DocumentHead';
 
 const HomePage = () => {
   return (
@@ -78,6 +79,7 @@ const App = () => {
     <Router>
       <Toaster position="top-center" />
       <DataProviderWrapper>
+        <DocumentHead />
         <Navbar />
 
         <Routes>
