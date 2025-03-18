@@ -1,29 +1,26 @@
 import { useEffect } from 'react';
-import { useData } from '../context/context';
+import metadata from '../../Operations/meta.json';
 
 const DocumentHead = () => {
-  const { data } = useData();
-  const { metadata } = data;
-
   useEffect(() => {
-    if (metadata) {
+    if (metadata.metadata) {
       // Update title
-      document.title = metadata.title;
+      document.title = metadata.metadata.title;
 
       // Update meta tags
       const metaTags = [
-        { name: 'description', content: metadata.description },
-        { name: 'keywords', content: metadata.keywords },
-        { name: 'author', content: metadata.author },
+        { name: 'description', content: metadata.metadata.description },
+        { name: 'keywords', content: metadata.metadata.keywords },
+        { name: 'author', content: metadata.metadata.author },
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: metadata.ogTitle },
-        { property: 'og:description', content: metadata.ogDescription },
-        { property: 'og:image', content: metadata.ogImage },
-        { name: 'twitter:card', content: metadata.twitterCard },
-        { name: 'twitter:title', content: metadata.twitterTitle },
-        { name: 'twitter:description', content: metadata.twitterDescription },
-        { name: 'twitter:image', content: metadata.twitterImage },
-        { name: 'theme-color', content: metadata.themeColor }
+        { property: 'og:title', content: metadata.metadata.ogTitle },
+        { property: 'og:description', content: metadata.metadata.ogDescription },
+        { property: 'og:image', content: metadata.metadata.ogImage },
+        { name: 'twitter:card', content: metadata.metadata.twitterCard },
+        { name: 'twitter:title', content: metadata.metadata.twitterTitle },
+        { name: 'twitter:description', content: metadata.metadata.twitterDescription },
+        { name: 'twitter:image', content: metadata.metadata.twitterImage },
+        { name: 'theme-color', content: metadata.metadata.themeColor }
       ];
 
       // Update or create meta tags
@@ -51,10 +48,10 @@ const DocumentHead = () => {
       // Update favicon
       const favicon = document.querySelector("link[rel='icon']");
       if (favicon) {
-        favicon.href = metadata.favicon;
+        favicon.href = metadata.metadata.favicon;
       }
     }
-  }, [metadata]);
+  }, []); // Empty dependency array since we're using static data
 
   return null;
 };
