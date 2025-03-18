@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { API } from 'aws-amplify';
-import initialData from '../../utils/data.json';
-import '../aws-config';
+import initialData from '../../Operations/data.json';
+import '../../aws-config';
 
 const DataContext = createContext();
 
